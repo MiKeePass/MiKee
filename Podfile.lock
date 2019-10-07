@@ -1,0 +1,79 @@
+PODS:
+  - Base32 (1.1.2)
+  - FontAwesome.swift (1.7.0)
+  - KeePassKit (2.4.2):
+    - KeePassKit/Core (= 2.4.2)
+  - KeePassKit/Argon2 (2.4.2)
+  - KeePassKit/ChaCha20 (2.4.2)
+  - KeePassKit/Core (2.4.2):
+    - KeePassKit/Argon2
+    - KeePassKit/ChaCha20
+    - KeePassKit/TwoFish
+    - KissXML (= 5.2.3)
+  - KeePassKit/TwoFish (2.4.2)
+  - KeychainAccess (3.2.0)
+  - KissXML (5.2.3)
+  - Navajo (0.0.1)
+  - Nimble (8.0.2)
+  - OneTimePassword (3.1.5):
+    - Base32 (~> 1.1.2)
+  - Quick (2.1.0)
+  - SimulatorStatusMagic (2.4.1)
+  - SwiftGen (6.1.0)
+  - SwiftLint (0.33.0)
+
+DEPENDENCIES:
+  - FontAwesome.swift
+  - KeePassKit (from `https://github.com/maxep/KeePassKit.git`, branch `cocoapods`)
+  - KeychainAccess
+  - Navajo
+  - Nimble
+  - OneTimePassword
+  - Quick
+  - SimulatorStatusMagic
+  - SwiftGen
+  - SwiftLint
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Base32
+    - FontAwesome.swift
+    - KeychainAccess
+    - KissXML
+    - Navajo
+    - Nimble
+    - OneTimePassword
+    - Quick
+    - SimulatorStatusMagic
+    - SwiftGen
+    - SwiftLint
+
+EXTERNAL SOURCES:
+  KeePassKit:
+    :branch: cocoapods
+    :git: https://github.com/maxep/KeePassKit.git
+    :submodules: true
+
+CHECKOUT OPTIONS:
+  KeePassKit:
+    :commit: 0df990ab754ab7c31c8279bbe797d8eb310bce43
+    :git: https://github.com/maxep/KeePassKit.git
+    :submodules: true
+
+SPEC CHECKSUMS:
+  Base32: 163c298644d184e89ca4e00a996bad6bf5166390
+  FontAwesome.swift: 9f377615aa61381796dca143cddfd2a388723ea1
+  KeePassKit: 9dfa246226a82e52e63f3a823c41d493cac1ad53
+  KeychainAccess: 3b1bf8a77eb4c6ea1ce9404c292e48f948954c6b
+  KissXML: 09f88ff8161fd058d67b70740b8b516687b52823
+  Navajo: 5fb68239b4e3af4610f31925bae1ca8e6bab8eaa
+  Nimble: 622629381bda1dd5678162f21f1368cec7cbba60
+  OneTimePassword: 247500f67ab074f10501bb1c46bd1596c57bdb2a
+  Quick: 4be43f6634acfa727dd106bdf3929ce125ffa79d
+  SimulatorStatusMagic: 28d4a9d1a500ac7cea0b2b5a43c1c6ddb40ba56c
+  SwiftGen: f872ca75cbd17bf7103c17f13dcfa0d9a15667b0
+  SwiftLint: fed9c66336e41fc74dc48a73678380718f0c8b0e
+
+PODFILE CHECKSUM: cc7f670297dbeb1070e963a9fd740b9b2e28442c
+
+COCOAPODS: 1.7.5

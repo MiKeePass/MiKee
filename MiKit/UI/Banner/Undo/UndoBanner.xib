@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UndoBanner" customModule="MiKit" customModuleProvider="target">
+            <connections>
+                <outlet property="actionButton" destination="6WS-kh-6K8" id="D7N-sk-Fgj"/>
+                <outlet property="contentView" destination="wJm-m3-L68" id="1z2-CO-f8L"/>
+                <outlet property="titleLabel" destination="Odl-sQ-DDB" id="YFl-Je-boh"/>
+                <outlet property="view" destination="ssz-Kc-N0a" id="Zge-Kp-2bU"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" contentMode="scaleToFill" id="ssz-Kc-N0a">
+            <rect key="frame" x="0.0" y="0.0" width="631" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wJm-m3-L68">
+                    <rect key="frame" x="0.0" y="0.0" width="631" height="44"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6WS-kh-6K8">
+                            <rect key="frame" x="587" y="0.0" width="44" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="6WS-kh-6K8" secondAttribute="height" multiplier="1:1" id="LnI-K7-tLZ"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                            <connections>
+                                <action selector="action:" destination="-1" eventType="touchUpInside" id="yD8-7l-42e"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Odl-sQ-DDB">
+                            <rect key="frame" x="20" y="12" width="43.5" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="6WS-kh-6K8" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Odl-sQ-DDB" secondAttribute="trailing" id="6Cq-jM-YPL"/>
+                        <constraint firstItem="Odl-sQ-DDB" firstAttribute="leading" secondItem="wJm-m3-L68" secondAttribute="leading" constant="20" symbolic="YES" id="DgL-IF-cR6"/>
+                        <constraint firstAttribute="bottom" secondItem="6WS-kh-6K8" secondAttribute="bottom" id="Its-vk-nCd"/>
+                        <constraint firstItem="Odl-sQ-DDB" firstAttribute="centerY" secondItem="wJm-m3-L68" secondAttribute="centerY" id="LqR-QF-VlA"/>
+                        <constraint firstItem="6WS-kh-6K8" firstAttribute="top" secondItem="wJm-m3-L68" secondAttribute="top" id="NcF-O0-vju"/>
+                        <constraint firstAttribute="trailing" secondItem="6WS-kh-6K8" secondAttribute="trailing" id="T7I-Wr-OxI"/>
+                        <constraint firstItem="Odl-sQ-DDB" firstAttribute="top" relation="greaterThanOrEqual" secondItem="wJm-m3-L68" secondAttribute="top" id="gwg-KG-GXL"/>
+                        <constraint firstAttribute="height" constant="44" id="r4g-Hj-nfg"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="wJm-m3-L68" firstAttribute="leading" secondItem="grw-4f-KG8" secondAttribute="leading" id="15y-RM-LvL"/>
+                <constraint firstItem="wJm-m3-L68" firstAttribute="top" secondItem="grw-4f-KG8" secondAttribute="top" placeholder="YES" id="TaF-ak-VFe"/>
+                <constraint firstItem="grw-4f-KG8" firstAttribute="trailing" secondItem="wJm-m3-L68" secondAttribute="trailing" id="eNW-w4-iQ4"/>
+                <constraint firstItem="wJm-m3-L68" firstAttribute="bottom" secondItem="grw-4f-KG8" secondAttribute="bottom" placeholder="YES" id="hcr-MG-622"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="grw-4f-KG8"/>
+            <point key="canvasLocation" x="161.5" y="191"/>
+        </view>
+    </objects>
+</document>

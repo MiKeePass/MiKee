@@ -1,0 +1,4 @@
+[submodule "fastlane"]
+	path = fastlane
+	url = git@git.maxep.me:3022/MiKee/fastlane.git
+    branch = master

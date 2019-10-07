@@ -1,0 +1,16 @@
+// Xcode
+xcuserdata
+
+// Carthage
+Carthage
+
+// CocoaPods
+MiKee.xcworkspace
+Pods
+
+// Fastlane
+fastlane/screenshots
+report.xml
+output
+.bitrise.secrets.yml
+.bundle

@@ -1,0 +1,151 @@
+/* 
+  Localizable.strings
+  MiKee
+
+  Created by Maxime Epain on 03/12/2018.
+  Copyright © 2018 Maxime Epain. All rights reserved.
+*/
+
+/* Copy To Clipboard */
+"Copy" = "Copier";
+
+/* Copied To Clipboard */
+"Copied" = "Copié";
+
+/* User Cell Title */
+"User" = "Utilisateur";
+
+/* Password Cell Title */
+"Password" = "Mot de passe";
+
+/* Website Cell Title */
+"Website" = "Website";
+
+/* Note Cell Title */
+"Note" = "Note";
+
+/* Username */
+"Username" = "Nom d'utilisateur";
+
+/* Deleted Banner */
+"Deleted" = "Supprimé";
+
+/* Auto-lock Always */
+"Always" = "Toujours";
+
+/* Auto-lock 5 minutes */
+"5 minutes" = "5 minutes";
+
+/* Auto-lock 10 minutes */
+"10 minutes" = "10 minutes";
+
+/* Auto-lock 30 minutes */
+"30 minutes" = "30 minutes";
+
+/* Auto-lock 1 hour */
+"1 hour" = "1 heure";
+
+/* Auto-lock 12 hours */
+"12 hours" = "12 heures";
+
+/* Auto-lock 1 day */
+"1 day" = "1 jour";
+
+/* Don't Auto-lock */
+"Don't Auto-lock" = "Ne pas verrouiller automatiquement";
+
+/* General */
+"General" = "Général";
+
+/* Apple */
+"Apple" = "Apple";
+
+/* Internet */
+"Internet" = "Internet";
+
+/* Email */
+"Email" = "Email";
+
+/* Banking */
+"Banking" = "Finance";
+
+/* No Value Error Title */
+"No Value" = "Aucune valeur";
+
+/* No Value Error Message */
+"Please enter a field value" = "Veuillez une valeur de champ";
+
+/* Already Exist Error Message: <value> already exist */
+"%@ already exist" = "%@ existe déjà";
+
+/* Error Title */
+"Error:" = "Erreur :";
+
+/* New Entry Title */
+"New Entry" = "Nouvelle Entrée";
+
+/* Add New Entry Details */
+"Add a new entry for %@" = "Ajouter une nouvelle entrée pour %@";
+
+/* Create Database Name Title */
+"Database Name" = "Nom";
+
+/* Database no name Error */
+"Please enter a Password Database name." = "Veuillez entrer le nom de la base de mot de passe.";
+
+/* Create Database Master Password Title */
+"Master Password" = "Mot de passe maître";
+
+/* Create Database Repeat Password Title */
+"Confirm Master Password" = "Confirmation";
+
+/* No Master Password Error */
+"Please enter a Master Password" = "Veuillez entrer un mot de passe maître";
+
+/* Master Passwork and Confirmation Matching Error */
+"Your password and confirmation password do not match." = "Le mot de passe et sa confirmation ne correspondent pas.";
+
+/* Create a Key File Title */
+"Create a Key file" = "Créer un fichier clé";
+
+/* Create Key File */
+"Enter a Key file name" = "Entrer le nom du fichier clé";
+
+/* Create OR select a key file */
+"Or" = "Ou";
+
+/* Select an existing key file */
+"Select An Existing One" = "Selectionner un fichier existant";
+
+/* Create Database Success Title*/
+"Your Password Database has been created!" = "Votre de base de mot de passe a été créée!";
+
+/* Export Database Description part 1 */
+"Your password database has been saved locally, do you want to export it?" = "Votre base de mot de passe a été sauvegardée localement, souhaitez-vous l'exporter ?";
+
+/* Export Database Description part 2 */
+"MiKee will be able to keep it synced with your external storage" = "MiKee est capable de se synchronizer avec votre stockage externe";
+
+/* Export Button */
+"Export" = "Exporter";
+
+/* Create Button */
+"Create" = "Créer";
+
+/* Skip Button */
+"Skip" = "Passer";
+
+/* Back Button */
+"Back" = "Retour";
+
+/* Next Button */
+"Next" = "Suivant";
+
+/* This account requires an OTPalert title */
+"This account requires an OTP, you can use the following code:" = "Ce compte requiert un OTP, vous pouvez utiliser le code suivant :";
+
+/* Ok, got it */
+"Ok, got it" = "D'accord, j'ai compris";
+
+/* QR Code Scanner title */
+"QR Code Scanner" = "QR Code Scanner";

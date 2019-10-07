@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AlertViewController" customModule="MiKit" customModuleProvider="target">
+            <connections>
+                <outlet property="containerView" destination="uNr-cY-sej" id="frK-3O-13B"/>
+                <outlet property="overlayView" destination="KBo-wp-zRd" id="4UK-J9-ggd"/>
+                <outlet property="view" destination="93F-v7-fz6" id="U68-sC-f4w"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="93F-v7-fz6">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KBo-wp-zRd">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+                    <gestureRecognizers/>
+                    <viewLayoutGuide key="safeArea" id="5Oc-oy-A2D"/>
+                </view>
+                <view clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="150" translatesAutoresizingMaskIntoConstraints="NO" id="uNr-cY-sej">
+                    <rect key="frame" x="60" y="373" width="294" height="150"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="294" id="8qE-pk-Xju"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="uNr-cY-sej" firstAttribute="centerX" secondItem="93F-v7-fz6" secondAttribute="centerX" id="T7h-4l-pWr"/>
+                <constraint firstItem="KBo-wp-zRd" firstAttribute="top" secondItem="93F-v7-fz6" secondAttribute="top" id="X7a-E1-0rW"/>
+                <constraint firstItem="KBo-wp-zRd" firstAttribute="leading" secondItem="DOb-At-eQw" secondAttribute="leading" id="YxX-tg-DrA"/>
+                <constraint firstAttribute="bottom" secondItem="KBo-wp-zRd" secondAttribute="bottom" id="c6J-pz-ia0"/>
+                <constraint firstItem="KBo-wp-zRd" firstAttribute="trailing" secondItem="DOb-At-eQw" secondAttribute="trailing" id="dpJ-zr-Jvw"/>
+                <constraint firstItem="uNr-cY-sej" firstAttribute="centerY" secondItem="93F-v7-fz6" secondAttribute="centerY" id="lvJ-37-0a2"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="DOb-At-eQw"/>
+            <point key="canvasLocation" x="-629" y="53"/>
+        </view>
+    </objects>
+</document>

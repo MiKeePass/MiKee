@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ActionSheet" customModule="MiKit" customModuleProvider="target">
+            <connections>
+                <outlet property="bottomConstraint" destination="sII-aM-Txj" id="785-aD-iVa"/>
+                <outlet property="contentView" destination="OsR-CE-DMt" id="eFk-wh-dMe"/>
+                <outlet property="leadingConstraint" destination="Qoo-lP-WAY" id="9vK-rb-qfr"/>
+                <outlet property="topConstraint" destination="gqa-V4-oTR" id="K97-n3-p9d"/>
+                <outlet property="trailingConstraint" destination="aNT-4i-EDO" id="0YE-Ze-oc5"/>
+                <outlet property="view" destination="iN0-l3-epB" id="DE4-N2-S57"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1yy-dW-z3J">
+                    <rect key="frame" x="8" y="704" width="398" height="150"/>
+                    <subviews>
+                        <view clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="150" translatesAutoresizingMaskIntoConstraints="NO" id="OsR-CE-DMt">
+                            <rect key="frame" x="0.0" y="0.0" width="398" height="150"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="8"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="OsR-CE-DMt" firstAttribute="centerY" secondItem="1yy-dW-z3J" secondAttribute="centerY" id="7zO-Bg-3Bj"/>
+                        <constraint firstAttribute="bottom" secondItem="OsR-CE-DMt" secondAttribute="bottom" id="Ma3-Os-nOR"/>
+                        <constraint firstItem="OsR-CE-DMt" firstAttribute="top" secondItem="1yy-dW-z3J" secondAttribute="top" id="Vc8-Xf-j0X"/>
+                        <constraint firstItem="OsR-CE-DMt" firstAttribute="leading" secondItem="1yy-dW-z3J" secondAttribute="leading" id="h12-Pu-7YP"/>
+                        <constraint firstAttribute="trailing" secondItem="OsR-CE-DMt" secondAttribute="trailing" id="hGd-DQ-0sz"/>
+                        <constraint firstItem="OsR-CE-DMt" firstAttribute="centerX" secondItem="1yy-dW-z3J" secondAttribute="centerX" id="leT-Oh-Onq"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstItem="1yy-dW-z3J" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="Qoo-lP-WAY"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="1yy-dW-z3J" secondAttribute="trailing" constant="8" id="aNT-4i-EDO"/>
+                <constraint firstItem="1yy-dW-z3J" firstAttribute="top" relation="greaterThanOrEqual" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="gqa-V4-oTR"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="1yy-dW-z3J" secondAttribute="bottom" constant="8" id="sII-aM-Txj"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="U4g-WB-3oE" appends="YES" id="Pmq-NA-sXs"/>
+            </connections>
+            <point key="canvasLocation" x="106.5" y="53.5"/>
+        </view>
+        <tapGestureRecognizer id="U4g-WB-3oE">
+            <connections>
+                <action selector="dismissWithSender:" destination="-1" id="4Tn-xS-6cf"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+</document>

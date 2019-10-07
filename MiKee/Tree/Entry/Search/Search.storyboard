@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Kip-y7-D1T">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search Navigation Controller-->
+        <scene sceneID="0to-Pe-940">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="Kip-y7-D1T" customClass="SearchNavigationController" customModule="MiKee" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CP7-vE-4yv">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="nVu-BJ-JVp" kind="relationship" relationship="rootViewController" id="MLx-k1-n22"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OWs-YM-iwf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-772" y="136"/>
+        </scene>
+        <!--Search View Controller-->
+        <scene sceneID="R00-39-nnn">
+            <objects>
+                <viewController id="nVu-BJ-JVp" customClass="SearchViewController" customModule="MiKee" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yZJ-3n-DC8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rVD-Sd-Qw3">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5QL-oJ-tgV" customClass="GradientMaskView" customModule="MiKit">
+                                        <rect key="frame" x="0.0" y="56" width="375" height="611"/>
+                                        <subviews>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="N8y-8a-7FJ">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="611"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="nVu-BJ-JVp" id="jhI-NT-UUr"/>
+                                                    <outlet property="delegate" destination="nVu-BJ-JVp" id="WeX-qc-lRm"/>
+                                                </connections>
+                                            </tableView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="N8y-8a-7FJ" secondAttribute="trailing" id="DWr-yD-ym1"/>
+                                            <constraint firstItem="N8y-8a-7FJ" firstAttribute="top" secondItem="5QL-oJ-tgV" secondAttribute="top" id="WK6-B8-3Fm"/>
+                                            <constraint firstItem="N8y-8a-7FJ" firstAttribute="leading" secondItem="5QL-oJ-tgV" secondAttribute="leading" id="ftr-i8-1wa"/>
+                                            <constraint firstAttribute="bottom" secondItem="N8y-8a-7FJ" secondAttribute="bottom" id="i7M-sN-MhC"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="5QL-oJ-tgV" secondAttribute="trailing" id="KJ0-Wx-yqU"/>
+                                    <constraint firstAttribute="bottom" secondItem="5QL-oJ-tgV" secondAttribute="bottom" id="Kpi-Y5-ZE2"/>
+                                    <constraint firstItem="5QL-oJ-tgV" firstAttribute="leading" secondItem="rVD-Sd-Qw3" secondAttribute="leading" id="qIf-3E-jMy"/>
+                                </constraints>
+                            </view>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5dr-97-maL">
+                                <rect key="frame" x="8" y="0.0" width="359" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="nVu-BJ-JVp" id="uyd-UF-jzA"/>
+                                </connections>
+                            </searchBar>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="5dr-97-maL" firstAttribute="leading" secondItem="3Nl-XL-3eH" secondAttribute="leading" constant="8" id="XHR-o3-BTv"/>
+                            <constraint firstItem="rVD-Sd-Qw3" firstAttribute="top" secondItem="yZJ-3n-DC8" secondAttribute="top" id="ZRu-Zl-yVk"/>
+                            <constraint firstItem="5QL-oJ-tgV" firstAttribute="top" secondItem="5dr-97-maL" secondAttribute="bottom" id="aYZ-kb-TqF"/>
+                            <constraint firstItem="rVD-Sd-Qw3" firstAttribute="trailing" secondItem="3Nl-XL-3eH" secondAttribute="trailing" id="hcf-4S-Vfb"/>
+                            <constraint firstItem="5dr-97-maL" firstAttribute="top" secondItem="3Nl-XL-3eH" secondAttribute="top" id="i4A-4b-Gfz"/>
+                            <constraint firstItem="3Nl-XL-3eH" firstAttribute="trailing" secondItem="5dr-97-maL" secondAttribute="trailing" constant="8" id="nSX-PM-syg"/>
+                            <constraint firstItem="rVD-Sd-Qw3" firstAttribute="bottom" secondItem="3Nl-XL-3eH" secondAttribute="bottom" id="wUW-3I-Jrh"/>
+                            <constraint firstItem="rVD-Sd-Qw3" firstAttribute="leading" secondItem="3Nl-XL-3eH" secondAttribute="leading" id="xfG-ZL-Fu5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3Nl-XL-3eH"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="lAQ-ya-Cp1"/>
+                    <connections>
+                        <outlet property="backgroundView" destination="rVD-Sd-Qw3" id="7q8-Ac-eVj"/>
+                        <outlet property="searchBar" destination="5dr-97-maL" id="1hI-qP-Lc4"/>
+                        <outlet property="tableView" destination="N8y-8a-7FJ" id="loB-ee-47g"/>
+                        <segue destination="Qd3-Nw-FpH" kind="custom" identifier="entry" customClass="SlidingRightSegue" customModule="MiKit" id="umf-GM-sUt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uvo-5A-32o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="9" y="135"/>
+        </scene>
+        <!--entry-->
+        <scene sceneID="I4Q-Um-xXr">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Entry" bundleIdentifier="com.maxep.MiKee" referencedIdentifier="entry" id="Qd3-Nw-FpH" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0R0-NA-yrk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="518" y="135"/>
+        </scene>
+    </scenes>
+</document>

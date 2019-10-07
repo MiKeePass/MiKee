@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AttributeField" customModule="MiKit" customModuleProvider="target">
+            <connections>
+                <outlet property="accessoryStackView" destination="j23-qM-5k8" id="w6m-4P-tLT"/>
+                <outlet property="accessoryView" destination="2KX-yb-gz9" id="5UQ-hE-FvX"/>
+                <outlet property="generatorView" destination="iN0-l3-epB" id="Ay1-Nr-UT2"/>
+                <outlet property="lockButton" destination="O5B-rO-For" id="EUR-EJ-axf"/>
+                <outlet property="passwordCheckView" destination="rMU-rb-KyU" id="VOP-TP-kga"/>
+                <outlet property="passwordGeneratorButton" destination="WIY-dY-Qjh" id="Lap-IR-KJr"/>
+                <outlet property="topSeparatorView" destination="duS-9K-jbb" id="kyO-bl-1sO"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PasswordGeneratorView" customModule="MiKit" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="236"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="16" minValue="0.0" maxValue="64" translatesAutoresizingMaskIntoConstraints="NO" id="aps-Gd-3ce">
+                    <rect key="frame" x="14" y="149" width="347" height="33"/>
+                    <connections>
+                        <action selector="slide:" destination="iN0-l3-epB" eventType="valueChanged" id="Cc4-8M-KQr"/>
+                    </connections>
+                </slider>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Length: 16" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vwh-NN-nzP">
+                    <rect key="frame" x="153.5" y="203" width="68" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gjk-uU-YG0">
+                    <rect key="frame" x="320" y="189" width="39" height="39"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="gjk-uU-YG0" secondAttribute="height" multiplier="1:1" id="mlf-lM-3OS"/>
+                        <constraint firstAttribute="height" constant="39" id="vd3-SX-kSO"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                    <connections>
+                        <action selector="refresh:" destination="iN0-l3-epB" eventType="touchUpInside" id="7i9-Sa-b2j"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YMD-ui-wSZ">
+                    <rect key="frame" x="19" y="0.0" width="337" height="130"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="uPk-b9-3eT">
+                            <rect key="frame" x="0.0" y="0.0" width="159" height="130"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KDV-8g-1FU" customClass="BorderButton" customModule="MiKit" customModuleProvider="target">
+                                    <rect key="frame" x="29.5" y="0.0" width="100" height="38"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="100" id="hNe-vi-vMb"/>
+                                    </constraints>
+                                    <inset key="contentEdgeInsets" minX="8" minY="8" maxX="8" maxY="8"/>
+                                    <state key="normal" title="ABC"/>
+                                    <connections>
+                                        <action selector="upper:" destination="iN0-l3-epB" eventType="touchUpInside" id="lfG-cq-4bu"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Td-ry-qcT" customClass="BorderButton" customModule="MiKit" customModuleProvider="target">
+                                    <rect key="frame" x="29.5" y="46" width="100" height="38"/>
+                                    <inset key="contentEdgeInsets" minX="8" minY="8" maxX="8" maxY="8"/>
+                                    <state key="normal" title="123"/>
+                                    <connections>
+                                        <action selector="digits:" destination="iN0-l3-epB" eventType="touchUpInside" id="XJw-7d-qLa"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LhF-Vu-12D" customClass="BorderButton" customModule="MiKit" customModuleProvider="target">
+                                    <rect key="frame" x="29.5" y="92" width="100" height="38"/>
+                                    <inset key="contentEdgeInsets" minX="8" minY="8" maxX="8" maxY="8"/>
+                                    <state key="normal" title="({&lt;"/>
+                                    <connections>
+                                        <action selector="brackets:" destination="iN0-l3-epB" eventType="touchUpInside" id="Php-Ba-LJA"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="1Td-ry-qcT" firstAttribute="width" secondItem="KDV-8g-1FU" secondAttribute="width" id="Ihf-9a-L3J"/>
+                                <constraint firstItem="LhF-Vu-12D" firstAttribute="width" secondItem="1Td-ry-qcT" secondAttribute="width" id="KVP-bz-Ceq"/>
+                            </constraints>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Uau-cU-1ZZ">
+                            <rect key="frame" x="178" y="0.0" width="159" height="130"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jIN-pZ-nXt" customClass="BorderButton" customModule="MiKit" customModuleProvider="target">
+                                    <rect key="frame" x="29.5" y="0.0" width="100" height="38"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="100" id="d8K-Oo-0FK"/>
+                                    </constraints>
+                                    <inset key="contentEdgeInsets" minX="8" minY="8" maxX="8" maxY="8"/>
+                                    <state key="normal" title="abc"/>
+                                    <connections>
+                                        <action selector="lower:" destination="iN0-l3-epB" eventType="touchUpInside" id="fnm-vW-BU0"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dAO-bM-nTN" customClass="BorderButton" customModule="MiKit" customModuleProvider="target">
+                                    <rect key="frame" x="29.5" y="46" width="100" height="38"/>
+                                    <inset key="contentEdgeInsets" minX="8" minY="8" maxX="8" maxY="8"/>
+                                    <state key="normal" title="!@#"/>
+                                    <connections>
+                                        <action selector="special:" destination="iN0-l3-epB" eventType="touchUpInside" id="Mmy-Hg-Hlj"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LjA-i8-GoZ" customClass="BorderButton" customModule="MiKit" customModuleProvider="target">
+                                    <rect key="frame" x="29.5" y="92" width="100" height="38"/>
+                                    <inset key="contentEdgeInsets" minX="8" minY="8" maxX="8" maxY="8"/>
+                                    <state key="normal" title="äæ±"/>
+                                    <connections>
+                                        <action selector="high:" destination="iN0-l3-epB" eventType="touchUpInside" id="Fgm-30-LEa"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="LjA-i8-GoZ" firstAttribute="width" secondItem="dAO-bM-nTN" secondAttribute="width" id="B1f-2T-agT"/>
+                                <constraint firstItem="dAO-bM-nTN" firstAttribute="width" secondItem="jIN-pZ-nXt" secondAttribute="width" id="QVl-LT-EcA"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="Uau-cU-1ZZ" firstAttribute="leading" secondItem="uPk-b9-3eT" secondAttribute="trailing" constant="19" id="Bzg-8d-GBx"/>
+                        <constraint firstAttribute="trailing" secondItem="Uau-cU-1ZZ" secondAttribute="trailing" id="C6l-wd-EbR"/>
+                        <constraint firstItem="uPk-b9-3eT" firstAttribute="top" secondItem="YMD-ui-wSZ" secondAttribute="top" id="ECZ-dv-HOo"/>
+                        <constraint firstItem="Uau-cU-1ZZ" firstAttribute="top" secondItem="YMD-ui-wSZ" secondAttribute="top" id="NAO-Vd-gr3"/>
+                        <constraint firstAttribute="bottom" secondItem="uPk-b9-3eT" secondAttribute="bottom" id="Q7o-fL-qN2"/>
+                        <constraint firstAttribute="bottom" secondItem="Uau-cU-1ZZ" secondAttribute="bottom" id="ZQm-Ij-flY"/>
+                        <constraint firstItem="Uau-cU-1ZZ" firstAttribute="width" secondItem="uPk-b9-3eT" secondAttribute="width" id="fxz-ee-VgS"/>
+                        <constraint firstItem="uPk-b9-3eT" firstAttribute="leading" secondItem="YMD-ui-wSZ" secondAttribute="leading" id="pJn-ec-bNr"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="aps-Gd-3ce" secondAttribute="trailing" constant="16" id="1aQ-7e-0KQ"/>
+                <constraint firstItem="vwh-NN-nzP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vUN-kp-3ea" secondAttribute="leading" id="6h7-aM-Zqm"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="gjk-uU-YG0" secondAttribute="bottom" constant="8" id="DIu-Uo-8C1"/>
+                <constraint firstItem="aps-Gd-3ce" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="Dv3-7y-amD"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="vwh-NN-nzP" secondAttribute="bottom" constant="16" id="Hkh-SW-0HM"/>
+                <constraint firstItem="vwh-NN-nzP" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Wva-GM-YEN"/>
+                <constraint firstItem="aps-Gd-3ce" firstAttribute="top" secondItem="YMD-ui-wSZ" secondAttribute="bottom" constant="19" id="dfT-sL-abu"/>
+                <constraint firstItem="YMD-ui-wSZ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="hPg-Ut-8ll"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="YMD-ui-wSZ" secondAttribute="trailing" constant="19" id="kBV-qL-5rC"/>
+                <constraint firstItem="vwh-NN-nzP" firstAttribute="top" relation="greaterThanOrEqual" secondItem="aps-Gd-3ce" secondAttribute="bottom" constant="8" id="ldJ-1y-EMc"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="gjk-uU-YG0" secondAttribute="trailing" constant="16" id="mco-Pt-5xp"/>
+                <constraint firstItem="gjk-uU-YG0" firstAttribute="top" secondItem="aps-Gd-3ce" secondAttribute="bottom" constant="8" id="vll-en-ptr"/>
+                <constraint firstItem="YMD-ui-wSZ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="19" id="zmW-as-a7F"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <action selector="passwordDidChange:" destination="-1" eventType="valueChanged" id="Urn-KI-JOj"/>
+                <outlet property="bracketsButton" destination="LhF-Vu-12D" id="g8F-pD-L4p"/>
+                <outlet property="digitsButton" destination="1Td-ry-qcT" id="i8h-rd-kDc"/>
+                <outlet property="highButton" destination="LjA-i8-GoZ" id="WJP-g1-twj"/>
+                <outlet property="lengthLabel" destination="vwh-NN-nzP" id="j4J-rX-4La"/>
+                <outlet property="lengthSlider" destination="aps-Gd-3ce" id="h1c-Ge-5sY"/>
+                <outlet property="lowerButton" destination="jIN-pZ-nXt" id="Qs3-mn-5eY"/>
+                <outlet property="refreshButton" destination="gjk-uU-YG0" id="ymF-5V-2Az"/>
+                <outlet property="specialButton" destination="dAO-bM-nTN" id="VSK-3s-e5W"/>
+                <outlet property="upperButton" destination="KDV-8g-1FU" id="Gvy-xO-5Cs"/>
+            </connections>
+            <point key="canvasLocation" x="42.399999999999999" y="-770.91454272863575"/>
+        </view>
+        <view contentMode="scaleToFill" id="2KX-yb-gz9">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="j23-qM-5k8">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Y2-Mp-oCC">
+                            <rect key="frame" x="0.0" y="0.0" width="287" height="44"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rMU-rb-KyU" customClass="PasswordStrengthView" customModule="MiKit" customModuleProvider="target">
+                                    <rect key="frame" x="16" y="20.5" width="255" height="3"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="3" id="J0j-ra-SOT"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="rMU-rb-KyU" secondAttribute="trailing" constant="16" id="Y0f-hK-ZPo"/>
+                                <constraint firstItem="rMU-rb-KyU" firstAttribute="centerY" secondItem="0Y2-Mp-oCC" secondAttribute="centerY" id="ebn-By-Ei6"/>
+                                <constraint firstItem="rMU-rb-KyU" firstAttribute="leading" secondItem="0Y2-Mp-oCC" secondAttribute="leading" constant="16" id="wkZ-bs-nzh"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O5B-rO-For">
+                            <rect key="frame" x="287" y="0.0" width="44" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="O5B-rO-For" secondAttribute="height" multiplier="1:1" id="RHC-xl-NkO"/>
+                                <constraint firstAttribute="width" constant="44" id="sW0-Wd-bDO"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <connections>
+                                <action selector="lock:" destination="-1" eventType="touchUpInside" id="aw0-Ox-cOw"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WIY-dY-Qjh">
+                            <rect key="frame" x="331" y="0.0" width="44" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="44" id="ACc-Xm-52e"/>
+                                <constraint firstAttribute="width" secondItem="WIY-dY-Qjh" secondAttribute="height" multiplier="1:1" id="hsn-nU-WtD"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <connections>
+                                <action selector="keyboard:" destination="-1" eventType="touchUpInside" id="mAM-cP-ZEU"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="P5D-ND-bv0"/>
+                    </constraints>
+                </stackView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="duS-9K-jbb">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="0.5"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="0.5" id="hRB-ea-mM3"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="duS-9K-jbb" firstAttribute="top" secondItem="2KX-yb-gz9" secondAttribute="top" id="2Ct-rA-60C"/>
+                <constraint firstItem="hLX-g7-RPD" firstAttribute="trailing" secondItem="j23-qM-5k8" secondAttribute="trailing" id="52M-rb-x8j"/>
+                <constraint firstItem="hLX-g7-RPD" firstAttribute="trailing" secondItem="duS-9K-jbb" secondAttribute="trailing" id="NAC-kw-prm"/>
+                <constraint firstAttribute="bottom" secondItem="j23-qM-5k8" secondAttribute="bottom" id="SpU-8f-FSx"/>
+                <constraint firstItem="duS-9K-jbb" firstAttribute="leading" secondItem="2KX-yb-gz9" secondAttribute="leading" id="gS4-3i-LxN"/>
+                <constraint firstItem="j23-qM-5k8" firstAttribute="leading" secondItem="hLX-g7-RPD" secondAttribute="leading" id="oKT-SE-CvD"/>
+                <constraint firstItem="j23-qM-5k8" firstAttribute="top" secondItem="2KX-yb-gz9" secondAttribute="top" id="owU-nJ-co5"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="hLX-g7-RPD"/>
+            <point key="canvasLocation" x="42" y="-938"/>
+        </view>
+    </objects>
+</document>
