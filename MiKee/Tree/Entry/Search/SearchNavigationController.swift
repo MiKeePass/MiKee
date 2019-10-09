@@ -76,13 +76,14 @@ class SearchAnimationController: NSObject, UIViewControllerAnimatedTransitioning
         } else {
             dismiss(using: transitionContext)
         }
-
     }
 
     func present(using transitionContext: UIViewControllerContextTransitioning) {
 
-        guard let snc = transitionContext.viewController(forKey: .to) as? SearchNavigationController else { return }
-        guard let destination = snc.searchViewController else { return }
+        guard
+            let snc = transitionContext.viewController(forKey: .to) as? SearchNavigationController,
+            let destination = snc.searchViewController
+        else { return }
 
         let containerView = transitionContext.containerView
         snc.view.frame = containerView.bounds
@@ -91,7 +92,7 @@ class SearchAnimationController: NSObject, UIViewControllerAnimatedTransitioning
 
         destination.backgroundView.alpha = 0
         destination.searchBar.frame = frame(destination: destination, searchBar: snc.searchBar)
-        destination.searchBar.frame.origin.y -= snc.view.safeAreaInsets.top // Cope with a the navigation controller top guide
+        destination.searchBar.frame.origin.y -= snc.view.safeAreaInsets.top // Cope with the navigation controller top guide
         destination.searchBar.layoutIfNeeded()
 
         snc.searchBar?.isHidden = true
@@ -131,7 +132,6 @@ class SearchAnimationController: NSObject, UIViewControllerAnimatedTransitioning
         var frame = destination.searchBar.frame
         frame.origin.y = -frame.height
         return frame
-
     }
 
 }

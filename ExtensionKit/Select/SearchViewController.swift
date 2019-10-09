@@ -53,11 +53,11 @@ class SearchViewController: UIViewController {
 
     @IBOutlet weak var backgroundView: UIView!
     @IBOutlet weak var searchBar: UISearchBar!
-    @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet weak var tableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = Asset.background.color
+        backgroundView.backgroundColor = Asset.background.color
 
         searchBar.tintColor = Asset.purple.color
         tableView.tableFooterView = UIView()
@@ -187,7 +187,6 @@ class SearchAnimationController: NSObject, UIViewControllerAnimatedTransitioning
 
         destination.backgroundView.alpha = 0
         destination.searchBar.frame = frame(destination: destination, searchBar: source.searchBar)
-        destination.searchBar.layoutIfNeeded()
         destination.view.setNeedsLayout()
 
         source.searchBar.isHidden = true
