@@ -50,7 +50,7 @@ class OTPAlertViewController: AlertViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = Asset.background.color
+        contentView?.backgroundColor = Asset.background.color
 
         titleLabel.text = L10n.thisAccountRequiresAnOTPYouCanUseTheFollowingCode
         titleLabel.textColor = Asset.grey.color

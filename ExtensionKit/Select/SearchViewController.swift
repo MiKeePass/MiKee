@@ -177,8 +177,10 @@ class SearchAnimationController: NSObject, UIViewControllerAnimatedTransitioning
     }
 
     func present(using transitionContext: UIViewControllerContextTransitioning) {
-        guard let source = transitionContext.viewController(forKey: .from) as? EntriesViewController else { return }
-        guard let destination = transitionContext.viewController(forKey: .to) as? SearchViewController else { return }
+        guard
+            let source = transitionContext.viewController(forKey: .from) as? EntriesViewController,
+            let destination = transitionContext.viewController(forKey: .to) as? SearchViewController
+        else { return }
 
         let containerView = transitionContext.containerView
         destination.view.frame = containerView.bounds
@@ -202,8 +204,10 @@ class SearchAnimationController: NSObject, UIViewControllerAnimatedTransitioning
     }
 
     func dismiss(using transitionContext: UIViewControllerContextTransitioning) {
-        guard let source = transitionContext.viewController(forKey: .to) as? EntriesViewController else { return }
-        guard let destination = transitionContext.viewController(forKey: .from) as? SearchViewController else { return }
+        guard
+            let source = transitionContext.viewController(forKey: .to) as? EntriesViewController,
+            let destination = transitionContext.viewController(forKey: .from) as? SearchViewController
+        else { return }
 
         source.searchBar.isHidden = true
 
