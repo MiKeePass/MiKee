@@ -174,13 +174,13 @@
                                     <constraint firstAttribute="bottom" secondItem="kxL-VB-dxE" secondAttribute="bottom" id="CBg-WT-cGx"/>
                                     <constraint firstItem="pcJ-kN-cfE" firstAttribute="leading" secondItem="vSI-tF-cG8" secondAttribute="leading" id="Ola-RX-LMZ"/>
                                     <constraint firstItem="kxL-VB-dxE" firstAttribute="leading" secondItem="vSI-tF-cG8" secondAttribute="leading" id="SQU-wf-nPX"/>
-                                    <constraint firstAttribute="trailing" secondItem="kxL-VB-dxE" secondAttribute="trailing" id="TDH-nx-esn"/>
-                                    <constraint firstAttribute="trailing" secondItem="pcJ-kN-cfE" secondAttribute="trailing" id="aTp-v0-m5f"/>
+                                    <constraint firstItem="kxL-VB-dxE" firstAttribute="trailing" secondItem="vSI-tF-cG8" secondAttribute="trailing" id="TDH-nx-esn"/>
+                                    <constraint firstItem="pcJ-kN-cfE" firstAttribute="trailing" secondItem="vSI-tF-cG8" secondAttribute="trailing" id="aTp-v0-m5f"/>
                                     <constraint firstAttribute="bottom" secondItem="pcJ-kN-cfE" secondAttribute="bottom" id="mCw-Bg-wuN"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" placeholderIntrinsicWidth="375" placeholderIntrinsicHeight="96" translatesAutoresizingMaskIntoConstraints="NO" id="cdG-ok-ppO">
-                                <rect key="frame" x="0.0" y="62" width="375" height="96"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="96"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
@@ -190,13 +190,13 @@
                             <constraint firstItem="JSL-2s-rR9" firstAttribute="top" secondItem="OfK-W0-ben" secondAttribute="top" id="NOy-AU-gTz"/>
                             <constraint firstItem="vSI-tF-cG8" firstAttribute="leading" secondItem="0bT-rR-rCZ" secondAttribute="leading" id="aKf-Uf-tKy"/>
                             <constraint firstItem="0bT-rR-rCZ" firstAttribute="trailing" secondItem="cdG-ok-ppO" secondAttribute="trailing" id="bfB-dM-ezh"/>
-                            <constraint firstItem="cdG-ok-ppO" firstAttribute="top" secondItem="0bT-rR-rCZ" secondAttribute="top" constant="62" id="eKm-qj-K4n"/>
-                            <constraint firstItem="vSI-tF-cG8" firstAttribute="top" secondItem="OfK-W0-ben" secondAttribute="top" id="kw5-gh-S2f"/>
+                            <constraint firstItem="cdG-ok-ppO" firstAttribute="top" secondItem="vSI-tF-cG8" secondAttribute="bottom" priority="999" constant="20" id="dm9-ej-g1W"/>
+                            <constraint firstItem="vSI-tF-cG8" firstAttribute="top" secondItem="OfK-W0-ben" secondAttribute="top" priority="999" id="kw5-gh-S2f"/>
                             <constraint firstItem="JSL-2s-rR9" firstAttribute="leading" secondItem="0bT-rR-rCZ" secondAttribute="leading" id="p9c-pH-znK"/>
                             <constraint firstItem="0bT-rR-rCZ" firstAttribute="trailing" secondItem="vSI-tF-cG8" secondAttribute="trailing" id="tCT-S0-coo"/>
                             <constraint firstItem="JSL-2s-rR9" firstAttribute="trailing" secondItem="0bT-rR-rCZ" secondAttribute="trailing" id="vaS-7W-yyx"/>
                             <constraint firstItem="JSL-2s-rR9" firstAttribute="bottom" secondItem="OfK-W0-ben" secondAttribute="bottom" id="w8U-4o-8aE"/>
-                            <constraint firstItem="pcJ-kN-cfE" firstAttribute="top" secondItem="0bT-rR-rCZ" secondAttribute="top" id="wRX-IZ-5KJ"/>
+                            <constraint firstItem="pcJ-kN-cfE" firstAttribute="top" secondItem="0bT-rR-rCZ" secondAttribute="top" priority="999" id="wRX-IZ-5KJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0bT-rR-rCZ"/>
                     </view>

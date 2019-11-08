@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RoR-aG-st5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RoR-aG-st5">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -47,7 +47,7 @@
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Entry" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2hP-ew-dxD" customClass="TitleField" customModule="MiKit">
-                                        <rect key="frame" x="151.5" y="22.5" width="72" height="21"/>
+                                        <rect key="frame" x="165.5" y="22" width="44" height="22"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="b2B-1C-U8f"/>
@@ -157,13 +157,13 @@
         <!--Field View Controller-->
         <scene sceneID="HsJ-3h-SaH">
             <objects>
-                <viewController storyboardIdentifier="field" id="8kk-SZ-gu1" customClass="FieldViewController" customModule="MiKit" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="field" modalPresentationStyle="overCurrentContext" id="8kk-SZ-gu1" customClass="FieldViewController" customModule="MiKit" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YVm-r5-tSt">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iQE-V0-YZu">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fxG-Me-qo1">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="66"/>
@@ -214,13 +214,13 @@
                                     <constraint firstAttribute="bottom" secondItem="Aqr-tO-Aja" secondAttribute="bottom" id="AKp-ih-RPV"/>
                                     <constraint firstItem="Aqr-tO-Aja" firstAttribute="leading" secondItem="fxG-Me-qo1" secondAttribute="leading" id="R7u-tt-tJe"/>
                                     <constraint firstItem="raU-sR-9g1" firstAttribute="leading" secondItem="fxG-Me-qo1" secondAttribute="leading" id="cyz-rP-Zk3"/>
-                                    <constraint firstAttribute="trailing" secondItem="Aqr-tO-Aja" secondAttribute="trailing" id="iDR-0O-bQt"/>
-                                    <constraint firstAttribute="trailing" secondItem="raU-sR-9g1" secondAttribute="trailing" id="mYz-QP-uML"/>
+                                    <constraint firstItem="Aqr-tO-Aja" firstAttribute="trailing" secondItem="fxG-Me-qo1" secondAttribute="trailing" id="iDR-0O-bQt"/>
+                                    <constraint firstItem="raU-sR-9g1" firstAttribute="trailing" secondItem="fxG-Me-qo1" secondAttribute="trailing" id="mYz-QP-uML"/>
                                     <constraint firstAttribute="bottom" secondItem="raU-sR-9g1" secondAttribute="bottom" id="yUe-Cg-h87"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" placeholderIntrinsicWidth="375" placeholderIntrinsicHeight="96" translatesAutoresizingMaskIntoConstraints="NO" id="tso-Y6-w1w">
-                                <rect key="frame" x="0.0" y="74" width="375" height="96"/>
+                                <rect key="frame" x="0.0" y="86" width="375" height="96"/>
                             </view>
                         </subviews>
                         <constraints>
@@ -229,12 +229,12 @@
                             <constraint firstItem="iQE-V0-YZu" firstAttribute="leading" secondItem="VLB-jz-QXJ" secondAttribute="leading" id="Ao2-hv-AFD"/>
                             <constraint firstItem="fxG-Me-qo1" firstAttribute="leading" secondItem="VLB-jz-QXJ" secondAttribute="leading" id="FcX-Tz-6wD"/>
                             <constraint firstItem="VLB-jz-QXJ" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="tso-Y6-w1w" secondAttribute="bottom" id="GRS-n5-jaQ"/>
-                            <constraint firstItem="fxG-Me-qo1" firstAttribute="top" secondItem="YVm-r5-tSt" secondAttribute="top" id="Pdh-P0-X99"/>
-                            <constraint firstItem="tso-Y6-w1w" firstAttribute="top" secondItem="VLB-jz-QXJ" secondAttribute="top" constant="74" id="RvH-OR-zXY"/>
+                            <constraint firstItem="fxG-Me-qo1" firstAttribute="top" secondItem="YVm-r5-tSt" secondAttribute="top" priority="999" id="Pdh-P0-X99"/>
                             <constraint firstItem="tso-Y6-w1w" firstAttribute="leading" secondItem="VLB-jz-QXJ" secondAttribute="leading" id="WlF-e1-sOH"/>
+                            <constraint firstItem="tso-Y6-w1w" firstAttribute="top" secondItem="fxG-Me-qo1" secondAttribute="bottom" priority="999" constant="20" id="sHP-5s-qRa"/>
                             <constraint firstItem="VLB-jz-QXJ" firstAttribute="trailing" secondItem="fxG-Me-qo1" secondAttribute="trailing" id="w2s-gu-eRb"/>
                             <constraint firstItem="VLB-jz-QXJ" firstAttribute="trailing" secondItem="tso-Y6-w1w" secondAttribute="trailing" id="wyH-yN-BxD"/>
-                            <constraint firstItem="Aqr-tO-Aja" firstAttribute="top" secondItem="VLB-jz-QXJ" secondAttribute="top" id="xos-6K-D3z"/>
+                            <constraint firstItem="Aqr-tO-Aja" firstAttribute="top" secondItem="VLB-jz-QXJ" secondAttribute="top" priority="999" id="xos-6K-D3z"/>
                             <constraint firstItem="iQE-V0-YZu" firstAttribute="bottom" secondItem="YVm-r5-tSt" secondAttribute="bottom" id="yrq-IB-nCy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VLB-jz-QXJ"/>

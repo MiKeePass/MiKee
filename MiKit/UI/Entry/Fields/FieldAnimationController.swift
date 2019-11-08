@@ -22,10 +22,10 @@ class FieldAnimationController: NSObject, UIViewControllerAnimatedTransitioning 
 
     var isPresenting = true
 
-    weak var source: EntryViewController?
+    var cell: UITableViewCell
 
-    init(from source: EntryViewController) {
-        self.source = source
+    init(from cell: UITableViewCell) {
+        self.cell = cell
         super.init()
     }
 
@@ -34,72 +34,64 @@ class FieldAnimationController: NSObject, UIViewControllerAnimatedTransitioning 
     }
 
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
-
-        var cell: UITableViewCell?
-        if let key = source?.selectedAttributeKey, let row = source?.availableAttributeKeys.firstIndex(of: key) {
-            let indexPath = IndexPath(row: row, section: 0)
-            cell = source?.tableView.cellForRow(at: indexPath)
-        }
-
-        if isPresenting {
-            present(using: transitionContext, from: cell)
-        } else {
-            dismiss(using: transitionContext, to: cell)
-        }
+        isPresenting ? present(using: transitionContext) : dismiss(using: transitionContext)
     }
 
-    func present(using transitionContext: UIViewControllerContextTransitioning, from cell: UITableViewCell?) {
+    func present(using transitionContext: UIViewControllerContextTransitioning) {
 
         guard let destination = transitionContext.viewController(forKey: .to) as? FieldViewController else { return }
 
         let containerView = transitionContext.containerView
-        destination.view.frame = containerView.bounds
+
+        destination.view.frame = transitionContext.finalFrame(for: destination)
         containerView.addSubview(destination.view)
+        containerView.setNeedsLayout()
 
         destination.backgroundView.alpha = 0
-        destination.topView.frame.origin.y = -destination.topView.frame.height
-        destination.contentView.frame = frame(destination: destination, cell: cell)
-        destination.contentView.layoutIfNeeded()
+        cell.isHidden = true
 
-        cell?.isHidden = true
+        // Animate Appearence
+        let topBarConstraint = destination.topView.bottomAnchor.constraint(equalTo: destination.view.topAnchor)
+        let topContainerConstraint = destination.contentView.topAnchor.constraint(equalTo: cell.topAnchor)
+        let heightContainerConstraint = destination.contentView.heightAnchor.constraint(equalTo: cell.heightAnchor)
+
+        NSLayoutConstraint.activate([topBarConstraint, topContainerConstraint, heightContainerConstraint])
+        containerView.layoutIfNeeded()
+
+        NSLayoutConstraint.deactivate([topBarConstraint, topContainerConstraint, heightContainerConstraint])
+        containerView.setNeedsLayout()
 
         UIView.animate(withDuration: transitionDuration(using: transitionContext), animations: {
-
             destination.backgroundView.alpha = 1
-            destination.view.layoutIfNeeded()
-
+            containerView.layoutIfNeeded()
         }, completion: { _ in
             transitionContext.completeTransition(true)
         })
     }
 
-    func dismiss(using transitionContext: UIViewControllerContextTransitioning, to cell: UITableViewCell?) {
+    func dismiss(using transitionContext: UIViewControllerContextTransitioning) {
 
         guard let destination = transitionContext.viewController(forKey: .from) as? FieldViewController else { return }
 
-        cell?.isHidden = true
+        let containerView = transitionContext.containerView
+
+        cell.isHidden = true
+
+        // Animate Disappearence
+        let topBarConstraint = destination.topView.bottomAnchor.constraint(equalTo: destination.view.topAnchor)
+        let topContainerConstraint = destination.contentView.topAnchor.constraint(equalTo: cell.topAnchor)
+        let heightContainerConstraint = destination.contentView.heightAnchor.constraint(equalTo: cell.heightAnchor)
+
+        NSLayoutConstraint.activate([topBarConstraint, topContainerConstraint, heightContainerConstraint])
+        containerView.setNeedsLayout()
 
         UIView.animate(withDuration: transitionDuration(using: transitionContext), animations: {
             destination.backgroundView.alpha = 0
-
-            destination.topView.frame.origin.y = -destination.topView.frame.height
-            destination.contentView.frame = self.frame(destination: destination, cell: cell)
-
+            containerView.layoutIfNeeded()
         }, completion: { _ in
-
-            cell?.isHidden = false
+            self.cell.isHidden = false
             transitionContext.completeTransition(true)
         })
-    }
-
-    func frame(destination: FieldViewController, cell: UITableViewCell?) -> CGRect {
-        if let source = source, let cell = cell {
-            return destination.view.convert(cell.frame, from: source.tableView)
-        }
-
-        var frame = destination.contentView.frame
-        frame.origin.y = -frame.height
-        return frame
     }
 
 }

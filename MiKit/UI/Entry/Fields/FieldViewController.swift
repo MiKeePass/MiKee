@@ -87,6 +87,7 @@ class FieldViewController: UIViewController {
 
         separatorView.backgroundColor = Asset.lightGrey.color
 
+        // Place the cell within its container
         cell.view.translatesAutoresizingMaskIntoConstraints = false
         cell.view.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8).isActive = true
         contentView.bottomAnchor.constraint(equalTo: cell.view.bottomAnchor, constant: 8).isActive = true
@@ -140,9 +141,17 @@ extension FieldViewController: UIViewControllerTransitioningDelegate {
 
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
 
-        guard let source = source as? EntryViewController else { return nil }
+        guard
+            let source = source as? EntryViewController,
+            let key = source.selectedAttributeKey,
+            let row = source.availableAttributeKeys.firstIndex(of: key)
+        else { return nil }
 
-        animationController = FieldAnimationController(from: source)
+        let indexPath = IndexPath(row: row, section: 0)
+
+        guard let cell = source.tableView.cellForRow(at: indexPath) else { return nil }
+
+        animationController = FieldAnimationController(from: cell)
         return animationController
     }
 
