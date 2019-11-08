@@ -27,7 +27,7 @@ open class SlidingNavigationController: UINavigationController, UINavigationCont
         case right
     }
 
-    @IBInspectable public var transitionDuration: Double = 0.3
+    @IBInspectable public var transitionDuration: Double = 0.2
 
     var animators = [UIViewController : (push: Animator, pop: Animator)]()
 
