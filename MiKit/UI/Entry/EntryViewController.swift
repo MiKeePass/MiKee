@@ -78,7 +78,7 @@ open class EntryViewController: UIViewController {
 
         for attribute in entry.attributes {
 
-            if attribute.key == kKPKTitleKey ||
+            if  attribute.key == kKPKTitleKey ||
                 attribute.value == nil ||
                 attribute.value.isEmpty {
                 continue
@@ -227,9 +227,25 @@ extension EntryViewController: UITableViewDelegate, UITableViewDataSource {
         let key = availableAttributeKeys[index]
         let attribute = entry?.attribute(withKey: key)
 
-        if let value = attribute?.value, let url = URL(string: value), let token = Token(url: url) {
+        if
+            let value = attribute?.value,
+            let url = URL(string: value),
+            let token = Token(url: url)
+        {
             let cell = tableView.dequeueReusableCell(withIdentifier: "otp") as! OTPCell
             cell.titleLabel.text = attribute?.key
+            cell.token = token
+            return cell
+        }
+
+        if
+            attribute?.key == TOTPSeedKey,
+            let secret = attribute?.value,
+            let settings = entry?.attribute(withKey: TOTPSettingsKey)?.value,
+            let token = Token(secret: secret, settings: settings)
+        {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "otp") as! OTPCell
+            cell.titleLabel.text = "TOTP"
             cell.token = token
             return cell
         }

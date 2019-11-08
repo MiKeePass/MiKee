@@ -39,7 +39,7 @@ public class OTPLabel: UILabel {
 
         if alpha > self.alpha {
             let code = NSMutableAttributedString(string: token.currentPassword ?? "")
-            code.addAttribute(NSAttributedString.Key.kern, value: 5, range: NSRange(location: 0, length: code.length))
+            code.addAttribute(NSAttributedString.Key.kern, value: token.generator.digits, range: NSRange(location: 0, length: code.length))
             attributedText = code
         }
 

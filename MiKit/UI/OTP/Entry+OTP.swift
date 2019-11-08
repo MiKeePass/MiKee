@@ -19,17 +19,54 @@
 
 import KeePassKit
 import OneTimePassword
+import Base32
+
+let TOTPSeedKey = "TOTP Seed"
+let TOTPSettingsKey = "TOTP Settings"
 
 extension KPKEntry {
 
     public var token: Token? {
 
         for attribute in customAttributes {
-            guard let value = attribute.value, let url = URL(string: value), let token = Token(url: url) else { continue }
-            return token
+
+            if
+                let value = attribute.value,
+                let url = URL(string: value),
+                let token = Token(url: url)
+            {
+                return token
+            }
+
+            if
+                attribute.key == TOTPSeedKey,
+                let secret = attribute.value,
+                let settings = self.attribute(withKey: TOTPSettingsKey)?.value,
+                let token = Token(secret: secret, settings: settings)
+            {
+                return token
+            }
+
         }
 
         return nil
     }
 
+}
+
+extension Token {
+
+    init?(secret: String, settings: String) {
+        let settings = settings.split(separator: ";")
+
+        guard
+            settings.count > 1,
+            let secret = MF_Base32Codec.data(fromBase32String: secret),
+            let time = TimeInterval(settings[0]),
+            let digits = Int(settings[1]),
+            let generator = Generator(factor: .timer(period: time), secret: secret, algorithm: .sha1, digits: digits)
+        else { return nil }
+
+        self.init(generator: generator)
+    }
 }
