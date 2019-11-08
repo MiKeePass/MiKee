@@ -29,8 +29,6 @@ protocol FieldViewControllerDelegate: class {
 
 class FieldViewController: UIViewController {
 
-    var animationController: FieldAnimationController?
-
     @IBOutlet weak var topView: UIView!
     @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var saveButton: UIButton!
@@ -45,22 +43,6 @@ class FieldViewController: UIViewController {
     weak var delegate: FieldViewControllerDelegate?
 
     private(set) var cell: FieldCell!
-
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        initialize()
-    }
-
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        initialize()
-    }
-
-    func initialize() {
-        // Handle transition presentation
-        modalPresentationStyle = .overCurrentContext
-        transitioningDelegate = self
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -135,28 +117,4 @@ class FieldViewController: UIViewController {
         close(sender)
     }
 
-}
-
-extension FieldViewController: UIViewControllerTransitioningDelegate {
-
-    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-
-        guard
-            let source = source as? EntryViewController,
-            let key = source.selectedAttributeKey,
-            let row = source.availableAttributeKeys.firstIndex(of: key)
-        else { return nil }
-
-        let indexPath = IndexPath(row: row, section: 0)
-
-        guard let cell = source.tableView.cellForRow(at: indexPath) else { return nil }
-
-        animationController = FieldAnimationController(from: cell)
-        return animationController
-    }
-
-    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        animationController?.isPresenting = false
-        return animationController
-    }
 }

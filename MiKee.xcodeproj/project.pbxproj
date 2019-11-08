@@ -80,7 +80,7 @@
 		9CDB670B20265F5800C4C36B /* Demo.kdbx in Resources */ = {isa = PBXBuildFile; fileRef = 9CBD27061F03033100528A4D /* Demo.kdbx */; };
 		9CDCC712202E06510072302F /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE8F89F1F6B18C5006F6397 /* EntryViewController.swift */; };
 		9CDCC714202E08AE0072302F /* FieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD99B592004FC65006A3E75 /* FieldViewController.swift */; };
-		9CDCC715202E08B00072302F /* FieldAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCD7F54200F4DFC00E0AB87 /* FieldAnimationController.swift */; };
+		9CDCC715202E08B00072302F /* FieldTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCD7F54200F4DFC00E0AB87 /* FieldTransitioning.swift */; };
 		9CDCC716202E08B20072302F /* FieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C60403D1FD9F49F005C1D09 /* FieldCell.swift */; };
 		9CDCC717202E08C00072302F /* FieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C60403E1FD9F49F005C1D09 /* FieldCell.xib */; };
 		9CDCC718202E08C40072302F /* NoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF645F11FC5F1E9001CCBE7 /* NoteCell.swift */; };
@@ -363,7 +363,7 @@
 		9CC81A132010EAFD0060A74F /* MiKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MiKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CC81A152010EAFD0060A74F /* MiKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MiKit.h; sourceTree = "<group>"; };
 		9CC81A162010EAFD0060A74F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9CCD7F54200F4DFC00E0AB87 /* FieldAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldAnimationController.swift; sourceTree = "<group>"; };
+		9CCD7F54200F4DFC00E0AB87 /* FieldTransitioning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldTransitioning.swift; sourceTree = "<group>"; };
 		9CCE68E520205E93007A9D7B /* Banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
 		9CD4C19E203EE8F900F12848 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		9CD99B592004FC65006A3E75 /* FieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldViewController.swift; sourceTree = "<group>"; };
@@ -920,7 +920,7 @@
 			isa = PBXGroup;
 			children = (
 				9CD99B592004FC65006A3E75 /* FieldViewController.swift */,
-				9CCD7F54200F4DFC00E0AB87 /* FieldAnimationController.swift */,
+				9CCD7F54200F4DFC00E0AB87 /* FieldTransitioning.swift */,
 				9C60403D1FD9F49F005C1D09 /* FieldCell.swift */,
 				9C60403E1FD9F49F005C1D09 /* FieldCell.xib */,
 				9CF645F01FC5F1CE001CCBE7 /* Note */,
@@ -1985,7 +1985,7 @@
 				9CEE5261202C80CF00043E89 /* EntryCell.swift in Sources */,
 				9CDCC714202E08AE0072302F /* FieldViewController.swift in Sources */,
 				9CF8DFA722AFFC0700E51E03 /* QRScannerView.swift in Sources */,
-				9CDCC715202E08B00072302F /* FieldAnimationController.swift in Sources */,
+				9CDCC715202E08B00072302F /* FieldTransitioning.swift in Sources */,
 				9CDCC716202E08B20072302F /* FieldCell.swift in Sources */,
 				9CDCC718202E08C40072302F /* NoteCell.swift in Sources */,
 				9CF8DF9C22AF0D3E00E51E03 /* AlertViewController.swift in Sources */,

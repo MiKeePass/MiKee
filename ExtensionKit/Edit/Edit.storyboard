@@ -231,7 +231,7 @@
                             <constraint firstItem="VLB-jz-QXJ" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="tso-Y6-w1w" secondAttribute="bottom" id="GRS-n5-jaQ"/>
                             <constraint firstItem="fxG-Me-qo1" firstAttribute="top" secondItem="YVm-r5-tSt" secondAttribute="top" priority="999" id="Pdh-P0-X99"/>
                             <constraint firstItem="tso-Y6-w1w" firstAttribute="leading" secondItem="VLB-jz-QXJ" secondAttribute="leading" id="WlF-e1-sOH"/>
-                            <constraint firstItem="tso-Y6-w1w" firstAttribute="top" secondItem="fxG-Me-qo1" secondAttribute="bottom" priority="999" constant="20" id="sHP-5s-qRa"/>
+                            <constraint firstItem="tso-Y6-w1w" firstAttribute="top" secondItem="fxG-Me-qo1" secondAttribute="bottom" priority="250" constant="20" id="sHP-5s-qRa"/>
                             <constraint firstItem="VLB-jz-QXJ" firstAttribute="trailing" secondItem="fxG-Me-qo1" secondAttribute="trailing" id="w2s-gu-eRb"/>
                             <constraint firstItem="VLB-jz-QXJ" firstAttribute="trailing" secondItem="tso-Y6-w1w" secondAttribute="trailing" id="wyH-yN-BxD"/>
                             <constraint firstItem="Aqr-tO-Aja" firstAttribute="top" secondItem="VLB-jz-QXJ" secondAttribute="top" priority="999" id="xos-6K-D3z"/>

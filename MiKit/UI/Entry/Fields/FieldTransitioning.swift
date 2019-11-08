@@ -1,4 +1,4 @@
-// FieldAnimationController.swift
+// FieldPresentTransitioning.swift
 // This file is part of MiKee.
 //
 // Copyright © 2019 Maxime Epain. All rights reserved.
@@ -18,27 +18,15 @@
 
 import UIKit
 
-class FieldAnimationController: NSObject, UIViewControllerAnimatedTransitioning {
+class FieldPresentTransitioning: NSObject, UIViewControllerAnimatedTransitioning {
 
-    var isPresenting = true
-
-    var cell: UITableViewCell
-
-    init(from cell: UITableViewCell) {
-        self.cell = cell
-        super.init()
-    }
+    var cell: UITableViewCell?
 
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return 0.3
     }
 
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
-        isPresenting ? present(using: transitionContext) : dismiss(using: transitionContext)
-    }
-
-    func present(using transitionContext: UIViewControllerContextTransitioning) {
-
         guard let destination = transitionContext.viewController(forKey: .to) as? FieldViewController else { return }
 
         let containerView = transitionContext.containerView
@@ -48,17 +36,29 @@ class FieldAnimationController: NSObject, UIViewControllerAnimatedTransitioning 
         containerView.setNeedsLayout()
 
         destination.backgroundView.alpha = 0
-        cell.isHidden = true
+        cell?.isHidden = true
 
         // Animate Appearence
-        let topBarConstraint = destination.topView.bottomAnchor.constraint(equalTo: destination.view.topAnchor)
-        let topContainerConstraint = destination.contentView.topAnchor.constraint(equalTo: cell.topAnchor)
-        let heightContainerConstraint = destination.contentView.heightAnchor.constraint(equalTo: cell.heightAnchor)
+        let constraints: [NSLayoutConstraint]
 
-        NSLayoutConstraint.activate([topBarConstraint, topContainerConstraint, heightContainerConstraint])
+        if let cell = cell {
+            constraints = [
+                destination.topView.bottomAnchor.constraint(equalTo: destination.view.topAnchor),
+                destination.contentView.topAnchor.constraint(equalTo: cell.topAnchor),
+                destination.contentView.heightAnchor.constraint(equalTo: cell.heightAnchor)
+            ]
+
+        } else {
+            constraints = [
+                destination.topView.bottomAnchor.constraint(equalTo: destination.view.topAnchor),
+                destination.contentView.bottomAnchor.constraint(equalTo: destination.view.topAnchor)
+            ]
+        }
+
+        NSLayoutConstraint.activate(constraints)
         containerView.layoutIfNeeded()
 
-        NSLayoutConstraint.deactivate([topBarConstraint, topContainerConstraint, heightContainerConstraint])
+        NSLayoutConstraint.deactivate(constraints)
         containerView.setNeedsLayout()
 
         UIView.animate(withDuration: transitionDuration(using: transitionContext), animations: {
@@ -69,27 +69,48 @@ class FieldAnimationController: NSObject, UIViewControllerAnimatedTransitioning 
         })
     }
 
-    func dismiss(using transitionContext: UIViewControllerContextTransitioning) {
+}
 
+class FieldDismissTransitioning: NSObject, UIViewControllerAnimatedTransitioning {
+
+    var cell: UITableViewCell?
+
+    func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
+        return 0.3
+    }
+
+    func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         guard let destination = transitionContext.viewController(forKey: .from) as? FieldViewController else { return }
 
         let containerView = transitionContext.containerView
 
-        cell.isHidden = true
+        cell?.isHidden = true
 
         // Animate Disappearence
-        let topBarConstraint = destination.topView.bottomAnchor.constraint(equalTo: destination.view.topAnchor)
-        let topContainerConstraint = destination.contentView.topAnchor.constraint(equalTo: cell.topAnchor)
-        let heightContainerConstraint = destination.contentView.heightAnchor.constraint(equalTo: cell.heightAnchor)
+        let constraints: [NSLayoutConstraint]
 
-        NSLayoutConstraint.activate([topBarConstraint, topContainerConstraint, heightContainerConstraint])
+        if let cell = cell {
+            constraints = [
+                destination.topView.bottomAnchor.constraint(equalTo: destination.view.topAnchor),
+                destination.contentView.topAnchor.constraint(equalTo: cell.topAnchor),
+                destination.contentView.heightAnchor.constraint(equalTo: cell.heightAnchor)
+            ]
+
+        } else {
+            constraints = [
+                destination.topView.bottomAnchor.constraint(equalTo: destination.view.topAnchor),
+                destination.contentView.bottomAnchor.constraint(equalTo: destination.view.topAnchor)
+            ]
+        }
+
+        NSLayoutConstraint.activate(constraints)
         containerView.setNeedsLayout()
 
         UIView.animate(withDuration: transitionDuration(using: transitionContext), animations: {
             destination.backgroundView.alpha = 0
             containerView.layoutIfNeeded()
         }, completion: { _ in
-            self.cell.isHidden = false
+            self.cell?.isHidden = false
             transitionContext.completeTransition(true)
         })
     }

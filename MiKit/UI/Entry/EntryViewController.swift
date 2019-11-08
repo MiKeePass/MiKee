@@ -96,6 +96,8 @@ open class EntryViewController: UIViewController {
 
         if let destination = segue.destination as? FieldViewController {
             destination.delegate = self
+            destination.modalPresentationStyle = .overCurrentContext
+            destination.transitioningDelegate = self
 
             if let attribute = entry?.attribute(withKey: selectedAttributeKey) {
                 destination.attribute = attribute
@@ -407,6 +409,33 @@ extension EntryViewController: QRScannerControllerDelegate {
         reload()
     }
 
+}
+
+// MARK: Field Transition
+
+extension EntryViewController: UIViewControllerTransitioningDelegate {
+
+    public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        let transition = FieldPresentTransitioning()
+
+        if let key = selectedAttributeKey, let row = availableAttributeKeys.firstIndex(of: key) {
+            let indexPath = IndexPath(row: row, section: 0)
+            transition.cell = tableView.cellForRow(at: indexPath)
+        }
+
+        return transition
+    }
+
+    public func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        let transition = FieldDismissTransitioning()
+
+        if let key = selectedAttributeKey, let row = availableAttributeKeys.firstIndex(of: key) {
+            let indexPath = IndexPath(row: row, section: 0)
+            transition.cell = tableView.cellForRow(at: indexPath)
+        }
+
+        return transition
+    }
 }
 
 // MARK: Title Field Extensions
