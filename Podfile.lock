@@ -35,7 +35,7 @@ DEPENDENCIES:
   - SwiftLint
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - Base32
     - FontAwesome.swift
     - KeychainAccess
@@ -76,4 +76,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: cc7f670297dbeb1070e963a9fd740b9b2e28442c
 
-COCOAPODS: 1.7.5
+COCOAPODS: 1.8.4
