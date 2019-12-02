@@ -40,7 +40,7 @@ target 'MiKee' do
       inherit! :search_paths
   end
 
-  target 'CredentialExtension' do
+  target 'AutoFill' do
       inherit! :search_paths
   end
 
