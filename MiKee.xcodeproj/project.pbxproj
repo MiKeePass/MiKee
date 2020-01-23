@@ -50,6 +50,8 @@
 		9C83B2351FCF29A200DE6886 /* AllEntriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C83B2341FCF29A200DE6886 /* AllEntriesViewController.swift */; };
 		9C85226D2167B2D2007DC165 /* Create.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C85226C2167B2D2007DC165 /* Create.storyboard */; };
 		9C85226F2167C6E2007DC165 /* CreateDatabaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C85226E2167C6E2007DC165 /* CreateDatabaseViewController.swift */; };
+		9C85287323D9AD84005FAB01 /* FeedbackAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C85287223D9AD84005FAB01 /* FeedbackAlertViewController.swift */; };
+		9C85287523D9AE6F005FAB01 /* Feedback.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C85287423D9AE6F005FAB01 /* Feedback.xib */; };
 		9C86EA4F202B6350003EDDBA /* WebExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9C86EA45202B6350003EDDBA /* WebExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		9C91679D2076618B009478F5 /* OpenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C91679C2076618B009478F5 /* OpenViewController.swift */; };
 		9C91DE052346154B00CB0D6D /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C91DE042346154B00CB0D6D /* StoreKit.framework */; };
@@ -321,6 +323,8 @@
 		9C83B2341FCF29A200DE6886 /* AllEntriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllEntriesViewController.swift; sourceTree = "<group>"; };
 		9C85226C2167B2D2007DC165 /* Create.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Create.storyboard; sourceTree = "<group>"; };
 		9C85226E2167C6E2007DC165 /* CreateDatabaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDatabaseViewController.swift; sourceTree = "<group>"; };
+		9C85287223D9AD84005FAB01 /* FeedbackAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackAlertViewController.swift; sourceTree = "<group>"; };
+		9C85287423D9AE6F005FAB01 /* Feedback.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Feedback.xib; sourceTree = "<group>"; };
 		9C86EA45202B6350003EDDBA /* WebExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WebExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C86EA4C202B6350003EDDBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C8789521F65D158006355BB /* MiError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiError.swift; sourceTree = "<group>"; };
@@ -661,6 +665,15 @@
 			path = Create;
 			sourceTree = "<group>";
 		};
+		9C85286F23D8CB20005FAB01 /* Feedback */ = {
+			isa = PBXGroup;
+			children = (
+				9C85287223D9AD84005FAB01 /* FeedbackAlertViewController.swift */,
+				9C85287423D9AE6F005FAB01 /* Feedback.xib */,
+			);
+			path = Feedback;
+			sourceTree = "<group>";
+		};
 		9C86EA46202B6350003EDDBA /* WebExtension */ = {
 			isa = PBXGroup;
 			children = (
@@ -871,6 +884,7 @@
 		9CC5AA0820B2D2DC006B096B /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				9C85286F23D8CB20005FAB01 /* Feedback */,
 				9CC5AA0920B2D30A006B096B /* Settings.storyboard */,
 				9CC5AA0B20B2D329006B096B /* SettingsViewController.swift */,
 				9CB7DC4A21D1168D00FCC4F5 /* SettingViewController.swift */,
@@ -1519,6 +1533,7 @@
 				9C2A1EBF1FD0738C00986F0D /* Group.storyboard in Resources */,
 				9C9734AD21C47F5200C87079 /* Assets.xcassets in Resources */,
 				9C2A1EC11FD0739A00986F0D /* Entry.storyboard in Resources */,
+				9C85287523D9AE6F005FAB01 /* Feedback.xib in Resources */,
 				9C5215451FD2B01D006D06F7 /* Open.storyboard in Resources */,
 				9CC5AA0A20B2D30A006B096B /* Settings.storyboard in Resources */,
 				9C5785E51F6C0D9F00CFAA18 /* GroupCell.xib in Resources */,
@@ -1959,6 +1974,7 @@
 				9CE8F8A11F6B18C6006F6397 /* GroupViewController.swift in Sources */,
 				9C5785E41F6C0D9F00CFAA18 /* GroupCell.swift in Sources */,
 				9CB6FBC31F02BFF200103EA5 /* AppDelegate.swift in Sources */,
+				9C85287323D9AD84005FAB01 /* FeedbackAlertViewController.swift in Sources */,
 				9CC04EEB207F7B4300370588 /* DatabaseCell.swift in Sources */,
 				9CEE5271202C945400043E89 /* SearchNavigationController.swift in Sources */,
 				9C91679D2076618B009478F5 /* OpenViewController.swift in Sources */,

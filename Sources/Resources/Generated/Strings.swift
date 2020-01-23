@@ -61,6 +61,8 @@ public enum L10n {
   public static let databaseName = L10n.tr("Localizable", "Database Name")
   /// Deleted
   public static let deleted = L10n.tr("Localizable", "Deleted")
+  /// Do you have a few minutes to give us feedback? We would be very interested in hearing back from you.
+  public static let doYouHaveAFewMinutesToGiveUsFeedbackWeWouldBeVeryInterestedInHearingBackFromYou = L10n.tr("Localizable", "Do you have a few minutes to give us feedback? We would be very interested in hearing back from you.")
   /// Don't Auto-lock
   public static let donTAutoLock = L10n.tr("Localizable", "Don't Auto-lock")
   /// Email
@@ -79,6 +81,8 @@ public enum L10n {
   public static let export = L10n.tr("Localizable", "Export")
   /// General
   public static let general = L10n.tr("Localizable", "General")
+  /// If it's not the right time, you will still have the opportunity to give feedback from the Settings screen.
+  public static let ifItSNotTheRightTimeYouWillStillHaveTheOpportunityToGiveFeedbackFromTheSettingsScreen = L10n.tr("Localizable", "If it's not the right time, you will still have the opportunity to give feedback from the Settings screen.")
   /// Import
   public static let `import` = L10n.tr("Localizable", "Import")
   /// Internet
@@ -103,6 +107,8 @@ public enum L10n {
   public static let next = L10n.tr("Localizable", "Next")
   /// No Value
   public static let noValue = L10n.tr("Localizable", "No Value")
+  /// Not now
+  public static let notNow = L10n.tr("Localizable", "Not now")
   /// Note
   public static let note = L10n.tr("Localizable", "Note")
   /// Ok, got it
@@ -139,6 +145,8 @@ public enum L10n {
   public static let skip = L10n.tr("Localizable", "Skip")
   /// Terms & Conditions
   public static let termsConditions = L10n.tr("Localizable", "Terms & Conditions")
+  /// Thank you for testing MiKee!
+  public static let thankYouForTestingMiKee = L10n.tr("Localizable", "Thank you for testing MiKee!")
   /// This account requires an OTP, you can use the following code:
   public static let thisAccountRequiresAnOTPYouCanUseTheFollowingCode = L10n.tr("Localizable", "This account requires an OTP, you can use the following code:")
   /// Unlock
@@ -153,6 +161,8 @@ public enum L10n {
   public static let username = L10n.tr("Localizable", "Username")
   /// Website
   public static let website = L10n.tr("Localizable", "Website")
+  /// What do you think about MiKee?
+  public static let whatDoYouThinkAboutMiKee = L10n.tr("Localizable", "What do you think about MiKee?")
   /// Your password and confirmation password do not match.
   public static let yourPasswordAndConfirmationPasswordDoNotMatch = L10n.tr("Localizable", "Your password and confirmation password do not match.")
   /// Your Password Database has been created!

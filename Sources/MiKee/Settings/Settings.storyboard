@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VnO-Ff-MdA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VnO-Ff-MdA">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -50,7 +51,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="958"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="jqi-nj-vZZ">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="766"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="847"/>
                                                 <subviews>
                                                     <containerView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="128" translatesAutoresizingMaskIntoConstraints="NO" id="inZ-BM-hMf">
                                                         <rect key="frame" x="0.0" y="0.0" width="375" height="128"/>
@@ -100,8 +101,40 @@
                                                             <segue destination="w99-Oi-Zo4" kind="embed" id="2Xi-LE-5Co"/>
                                                         </connections>
                                                     </containerView>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mLF-qr-67I">
+                                                        <rect key="frame" x="0.0" y="706" width="375" height="81"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YOQ-fp-Eqi" customClass="BorderControl" customModule="MiKit">
+                                                                <rect key="frame" x="8" y="8" width="359" height="65"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What do you think of MiKee?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ylo-TD-esh">
+                                                                        <rect key="frame" x="16" y="16" width="327" height="33"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <color key="textColor" name="Purple"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="bottom" secondItem="ylo-TD-esh" secondAttribute="bottom" constant="16" id="PDx-Ye-Lbo"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="ylo-TD-esh" secondAttribute="trailing" constant="16" id="Rbe-WK-cwo"/>
+                                                                    <constraint firstItem="ylo-TD-esh" firstAttribute="top" secondItem="YOQ-fp-Eqi" secondAttribute="top" constant="16" id="Xd4-E8-TuF"/>
+                                                                    <constraint firstItem="ylo-TD-esh" firstAttribute="leading" secondItem="YOQ-fp-Eqi" secondAttribute="leading" constant="16" id="oJR-8I-uDy"/>
+                                                                </constraints>
+                                                                <connections>
+                                                                    <action selector="feedback:" destination="VnO-Ff-MdA" eventType="touchUpInside" id="eMG-Gc-SWw"/>
+                                                                    <action selector="touch:" destination="LlN-vu-qgj" eventType="touchUpInside" id="AOg-Kp-g7C"/>
+                                                                </connections>
+                                                            </view>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="YOQ-fp-Eqi" firstAttribute="top" secondItem="mLF-qr-67I" secondAttribute="top" constant="8" id="m4q-H1-eRg"/>
+                                                            <constraint firstAttribute="bottom" secondItem="YOQ-fp-Eqi" secondAttribute="bottom" constant="8" id="q3c-yo-TJT"/>
+                                                            <constraint firstAttribute="trailing" secondItem="YOQ-fp-Eqi" secondAttribute="trailing" constant="8" id="sg2-Wf-ffO"/>
+                                                            <constraint firstItem="YOQ-fp-Eqi" firstAttribute="leading" secondItem="mLF-qr-67I" secondAttribute="leading" constant="8" id="t7g-JS-JOF"/>
+                                                        </constraints>
+                                                    </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f6y-w7-Ei3">
-                                                        <rect key="frame" x="0.0" y="706" width="375" height="60"/>
+                                                        <rect key="frame" x="0.0" y="787" width="375" height="60"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="9d8-fN-gGI">
                                                                 <rect key="frame" x="16" y="16" width="92" height="44"/>
@@ -170,6 +203,7 @@
                     <connections>
                         <outlet property="backButton" destination="bmf-gW-aA8" id="jiX-4w-Oaa"/>
                         <outlet property="biometricContainer" destination="z1G-mu-T0x" id="Nts-4a-f2i"/>
+                        <outlet property="feedbackLabel" destination="ylo-TD-esh" id="PqS-2H-eLn"/>
                         <outlet property="generalLabel" destination="kmN-lV-9yL" id="Oey-YI-bsa"/>
                         <outlet property="privacyButton" destination="Gbn-9V-63J" id="lTT-82-fN5"/>
                         <outlet property="scrollView" destination="cDe-wK-ER6" id="zzU-Ia-Qwd"/>
@@ -568,4 +602,9 @@
             <point key="canvasLocation" x="1774" y="386"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="Purple">
+            <color red="0.45899999141693115" green="0.46299999952316284" blue="0.99199998378753662" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

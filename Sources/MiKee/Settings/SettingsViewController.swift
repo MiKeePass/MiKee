@@ -22,6 +22,10 @@ import Resources
 import MiKit
 import SafariServices
 
+let termsURL = URL(string: "https://mikee.maxep.me/terms/")!
+let privacyURL = URL(string: "https://mikee.maxep.me/privacy/")!
+let feedbackURL = URL(string: "https://forms.gle/VNWJ67LuoDEsJZZ5A")!
+
 class SettingsViewController: UIViewController {
 
     @IBOutlet weak var scrollView: UIScrollView!
@@ -31,6 +35,8 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var generalLabel: UILabel!
 
     @IBOutlet weak var biometricContainer: UIView!
+
+    @IBOutlet weak var feedbackLabel: UILabel!
 
     @IBOutlet weak var termsButton: UIButton!
     @IBOutlet weak var privacyButton: UIButton!
@@ -49,6 +55,8 @@ class SettingsViewController: UIViewController {
         privacyButton.setTitleColor(Asset.purple.color, for: .normal)
 
         generalLabel.text = L10n.general
+
+        feedbackLabel.text = L10n.whatDoYouThinkAboutMiKee
 
         guard LAContext.biometry == .none else { return }
         biometricContainer.removeFromSuperview()
@@ -124,18 +132,19 @@ class SettingsViewController: UIViewController {
     }
 
     @IBAction func terms(_ sender: Any) {
-        guard let url = URL(string: "https://mikee.maxep.me/terms/") else { return }
-        open(url: url)
+        open(url: termsURL)
     }
 
     @IBAction func privacy(_ sender: Any) {
-        guard let url = URL(string: "https://mikee.maxep.me/privacy/") else { return }
-        open(url: url)
+        open(url: privacyURL)
+    }
+
+    @IBAction func feedback(_ sender: Any) {
+        open(url: feedbackURL)
     }
 
     private func open(url: URL) {
         let configuration = SFSafariViewController.Configuration()
-        configuration.entersReaderIfAvailable = true
         configuration.barCollapsingEnabled = false
 
         let svc = SFSafariViewController(url: url, configuration: configuration)

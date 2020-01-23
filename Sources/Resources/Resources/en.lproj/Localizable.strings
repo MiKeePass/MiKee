@@ -189,6 +189,9 @@
 /* Save Button */
 "Save" = "Save";
 
+/* Not now Button */
+"Not now" = "Not now";
+
 /* Settings Title */
 "Settings" = "Settings";
 
@@ -224,3 +227,15 @@
 
 /* Privacy title */
 "Privacy Policy" = "Privacy Policy";
+
+/* Feedback title */
+"Thank you for testing MiKee!" = "Thank you for testing MiKee!";
+
+/* Feedback description 1 */
+"Do you have a few minutes to give us feedback? We would be very interested in hearing back from you." = "Do you have a few minutes to give us feedback? We would be very interested in hearing back from you.";
+
+/* Feedback description 2 */
+"If it's not the right time, you will still have the opportunity to give feedback from the Settings screen." = "If it's not the right time, you will still have the opportunity to give feedback from the Settings screen.";
+
+/* Feedback Settings title */
+"What do you think about MiKee?" = "What do you think about MiKee?";

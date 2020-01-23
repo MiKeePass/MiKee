@@ -59,6 +59,15 @@ class AllEntriesViewController: UIViewController {
         tableView.reloadData()
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        guard !UserDefaults.standard.bool(forKey: "feedback.alert.presented") else { return }
+        let feedback = FeedbackAlertViewController()
+        present(feedback, animated: true)
+        UserDefaults.standard.set(true, forKey: "feedback.alert.presented")
+    }
+
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
