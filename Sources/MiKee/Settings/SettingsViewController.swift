@@ -141,6 +141,7 @@ class SettingsViewController: UIViewController {
 
     @IBAction func feedback(_ sender: Any) {
         open(url: feedbackURL)
+        Log.event(.feedback)
     }
 
     private func open(url: URL) {

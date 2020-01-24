@@ -52,6 +52,7 @@
 		9C85226F2167C6E2007DC165 /* CreateDatabaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C85226E2167C6E2007DC165 /* CreateDatabaseViewController.swift */; };
 		9C85287323D9AD84005FAB01 /* FeedbackAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C85287223D9AD84005FAB01 /* FeedbackAlertViewController.swift */; };
 		9C85287523D9AE6F005FAB01 /* Feedback.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C85287423D9AE6F005FAB01 /* Feedback.xib */; };
+		9C85287823DB0367005FAB01 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C85287723DB0367005FAB01 /* Log.swift */; };
 		9C86EA4F202B6350003EDDBA /* WebExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9C86EA45202B6350003EDDBA /* WebExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		9C91679D2076618B009478F5 /* OpenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C91679C2076618B009478F5 /* OpenViewController.swift */; };
 		9C91DE052346154B00CB0D6D /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C91DE042346154B00CB0D6D /* StoreKit.framework */; };
@@ -325,6 +326,7 @@
 		9C85226E2167C6E2007DC165 /* CreateDatabaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDatabaseViewController.swift; sourceTree = "<group>"; };
 		9C85287223D9AD84005FAB01 /* FeedbackAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackAlertViewController.swift; sourceTree = "<group>"; };
 		9C85287423D9AE6F005FAB01 /* Feedback.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Feedback.xib; sourceTree = "<group>"; };
+		9C85287723DB0367005FAB01 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		9C86EA45202B6350003EDDBA /* WebExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WebExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C86EA4C202B6350003EDDBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C8789521F65D158006355BB /* MiError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiError.swift; sourceTree = "<group>"; };
@@ -674,6 +676,14 @@
 			path = Feedback;
 			sourceTree = "<group>";
 		};
+		9C85287623DB0339005FAB01 /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				9C85287723DB0367005FAB01 /* Log.swift */,
+			);
+			path = Log;
+			sourceTree = "<group>";
+		};
 		9C86EA46202B6350003EDDBA /* WebExtension */ = {
 			isa = PBXGroup;
 			children = (
@@ -895,6 +905,7 @@
 		9CC81A142010EAFD0060A74F /* MiKit */ = {
 			isa = PBXGroup;
 			children = (
+				9C85287623DB0339005FAB01 /* Log */,
 				9CEE5252202C727B00043E89 /* UI */,
 				9CFC4B5F1FD4011600025197 /* Settings */,
 				9C0A0A8421FCA16800914A78 /* Database */,
@@ -1991,6 +2002,7 @@
 			files = (
 				9CC81A212010EB260060A74F /* MiError.swift in Sources */,
 				9CC81A202010EB040060A74F /* Database.swift in Sources */,
+				9C85287823DB0367005FAB01 /* Log.swift in Sources */,
 				9CADFCCD21ADBE330060883B /* PasswordStrengthView.swift in Sources */,
 				9CDB670A202645A700C4C36B /* Demo.swift in Sources */,
 				9CEE5253202C740E00043E89 /* LockViewController.swift in Sources */,

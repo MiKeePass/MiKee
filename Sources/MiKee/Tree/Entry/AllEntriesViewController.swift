@@ -62,10 +62,10 @@ class AllEntriesViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
-        guard !UserDefaults.standard.bool(forKey: "feedback.alert.presented") else { return }
+        guard Log.sessions > 5, !Log.get(.feedback) else { return }
         let feedback = FeedbackAlertViewController()
         present(feedback, animated: true)
-        UserDefaults.standard.set(true, forKey: "feedback.alert.presented")
+        Log.event(.feedback)
     }
 
     // MARK: - Navigation
