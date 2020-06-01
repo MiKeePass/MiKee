@@ -33,7 +33,7 @@ public class Demo: Database {
         super.init(coder: aDecoder)
     }
 
-    override public func sync() throws { }
+    override public func sync(_ completionHandler: ((Bool) -> Void)? = nil) throws { }
 
-    override public func save() throws { }
+    override public func save(_ completionHandler: ((Bool) -> Void)? = nil) throws { }
 }

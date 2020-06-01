@@ -26,14 +26,31 @@ var isAppExtension: Bool {
 
 extension Database {
 
-    @available(iOSApplicationExtension, unavailable)
-    @objc open func sync() throws {
-        guard let tree = tree else { throw MiError.locked }
-        let key = KPKCompositeKey(password: password, keyFileData: self.key?.data)!
-        try sync(tree: tree, key: key)
+    private class Document: UIDocument {
+
+        private(set) var data: Data
+
+        init(fileURL url: URL, data: Data) {
+            self.data = data
+            super.init(fileURL: url)
+        }
+
+        override public func contents(forType typeName: String) throws -> Any { data }
+
+        override func load(fromContents contents: Any, ofType typeName: String?) throws {
+            guard let data = contents as? Data else { throw MiError.noValue }
+            self.data = data
+        }
     }
 
-    @objc open func save() throws {
+    @available(iOSApplicationExtension, unavailable)
+    @objc open func sync(_ completionHandler: ((Bool) -> Void)? = nil) throws {
+        guard let tree = tree else { throw MiError.locked }
+        let key = KPKCompositeKey(password: password, keyFileData: self.key?.data)!
+        try sync(tree: tree, key: key, completionHandler: completionHandler)
+    }
+
+    @objc open func save(_ completionHandler: ((Bool) -> Void)? = nil) throws {
         guard let tree = tree else { throw MiError.locked }
 
         let key = KPKCompositeKey(password: password, keyFileData: self.key?.data)!
@@ -44,15 +61,16 @@ extension Database {
         guard !isAppExtension, let bookmark = bookmark else { return }
 
         var isStale = false
-        let url = try URL(resolvingBookmarkData: bookmark, bookmarkDataIsStale: &isStale)
+        let url = try URL(resolvingBookmarkData: bookmark, options: .withoutUI, bookmarkDataIsStale: &isStale)
 
         if isStale {
-            self.bookmark = try url.bookmarkData()
+            self.bookmark = try url.bookmarkData(options: .minimalBookmark)
             try archive()
         }
 
-        try url.secure {
-            try data.write(to: $0)
+        url.secure {
+            let document = Document(fileURL: $0, data: data)
+            document.save(to: $0, for: .forOverwriting, completionHandler: completionHandler)
         }
     }
 
@@ -102,7 +120,7 @@ extension Database {
         let bookmark: Data = try url.secure {
             let data = try Data(contentsOf: $0)
             try data.write(to: file)
-            return try url.bookmarkData()
+            return try url.bookmarkData(options: .minimalBookmark)
         }
 
         let name = url.deletingPathExtension().lastPathComponent
@@ -124,7 +142,7 @@ extension Database {
 
         try url.secure {
             try FileManager.default.moveItem(at: file, to: $0)
-            bookmark = try url.bookmarkData()
+            bookmark = try url.bookmarkData(options: .minimalBookmark)
         }
 
         try archive()
@@ -141,14 +159,14 @@ extension Database {
         return try `import`(file)
     }
 
-    func sync(tree: KPKTree, key: KPKCompositeKey) throws {
+    func sync(tree: KPKTree, key: KPKCompositeKey, completionHandler: ((Bool) -> Void)? = nil) throws {
         guard !isAppExtension, let bookmark = bookmark else { return }
 
         var isStale = false
-        let url = try URL(resolvingBookmarkData: bookmark, bookmarkDataIsStale: &isStale)
+        let url = try URL(resolvingBookmarkData: bookmark, options: .withoutUI, bookmarkDataIsStale: &isStale)
 
         if isStale {
-            self.bookmark = try url.bookmarkData()
+            self.bookmark = try url.bookmarkData(options: .minimalBookmark)
             try archive()
         }
 
@@ -158,7 +176,9 @@ extension Database {
 
             let data = try KPKArchiver(tree: tree, key: key).archiveTree()
             try data.write(to: file)
-            try data.write(to: $0)
+
+            let document = Document(fileURL: $0, data: data)
+            document.save(to: $0, for: .forOverwriting, completionHandler: completionHandler)
         }
     }
 }
