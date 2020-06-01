@@ -57,6 +57,11 @@ class OpenViewController: LockViewController {
         }
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let destination = segue.destination as? DatabasesViewController else { return }
+        destination.delegate = self
+    }
+
     override func open(tree: KPKTree, animated: Bool, completion: (() -> Void)? = nil) {
         self.tree = tree
 
@@ -136,6 +141,13 @@ class OpenViewController: LockViewController {
         return root.childEntries.filter { predicate.evaluate(with: $0) }.first
     }
 
+}
+
+extension OpenViewController: DatabasesViewControllerDelegate {
+
+    func databasesViewController(_ databasesViewController: DatabasesViewController, didSelect database: Database) {
+        self.database = database
+    }
 }
 
 extension OpenViewController: ExtensionDelegate {

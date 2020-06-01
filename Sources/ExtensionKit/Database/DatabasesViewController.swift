@@ -20,12 +20,18 @@ import UIKit
 import Resources
 import MiKit
 
+public protocol DatabasesViewControllerDelegate: class {
+    func databasesViewController(_ databasesViewController: DatabasesViewController, didSelect database: Database)
+}
+
 public class DatabasesViewController: UIViewController {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var backButton: UIButton!
 
-    var databases: [Database]!
+    public var databases: [Database]!
+
+    public weak var delegate: DatabasesViewControllerDelegate?
 
     var indexPathForSelectKey: IndexPath?
 
@@ -54,7 +60,9 @@ extension DatabasesViewController: UITableViewDelegate, UITableViewDataSource {
     // MARK: - TableView delegate
 
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        Settings.LastDatabaseName = databases[indexPath.row].name
+        let database = databases[indexPath.row]
+        Settings.LastDatabaseName = database.name
+        delegate?.databasesViewController(self, didSelect: database)
         navigationController?.popViewController(animated: true)
     }
 
