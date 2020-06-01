@@ -94,7 +94,7 @@ open class LockViewController: UIViewController {
         guard let database = database else { return }
 
         if database.lockIfNeeded() {
-            biometricAuthentication()
+            unlock()
 
         } else if database.hasPassword {
             formView?.alpha = 0
@@ -133,7 +133,11 @@ open class LockViewController: UIViewController {
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
     }
 
-    private func open(database: Database, animated: Bool = true, _ completionHandler: (() -> Void)? = nil) {
+    open func open(tree: KPKTree, animated: Bool = true, completion: (() -> Void)? = nil) {
+        fatalError("not implemented")
+    }
+
+    private func open(database: Database, animated: Bool = true, completion: (() -> Void)? = nil) {
 
         startLoading()
 
@@ -143,26 +147,17 @@ open class LockViewController: UIViewController {
             case .success(let tree):
                 self.stopLoading()
                 Settings.LastDatabaseName = database.name
-
-                self.open(tree: tree, animated: animated) {
-                    self.presentForm()
-                }
+                self.open(tree: tree, animated: animated, completion: self.presentForm)
 
             case .failure(let error):
                 self.presentForm()
                 error.show()
-
                 database.password = nil
                 try? database.archive()
             }
 
-            completionHandler?()
+            completion?()
         }
-
-    }
-
-    open func open(tree: KPKTree, animated: Bool = true, completion: (() -> Void)? = nil) {
-        fatalError("not implemented")
     }
 
     @IBAction func editPassword(_ sender: Any) {
@@ -190,37 +185,11 @@ open class LockViewController: UIViewController {
     // MARK: - Navigation
 
     override open func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? UISplitViewController {
-            destination.transitioningDelegate = self
-        }
+        guard let destination = segue.destination as? UISplitViewController else { return }
+        destination.transitioningDelegate = self
     }
 
-    func biometricAuthentication() {
-        guard Settings.Biometrics, let database = database, database.hasPassword else { return }
-
-        formView?.alpha = 0
-
-        self.passwordField?.resignFirstResponder()
-
-        let context = LAContext()
-        context.localizedCancelTitle = L10n.cancel
-        context.localizedFallbackTitle = L10n.enterMasterPassword
-
-        let delay = isAppExtension ? 0.5 : 0
-        context.authenticate(after: delay, localizedReason: L10n.unlockMiKee) { result in
-
-            switch result {
-            case .success(let success):
-                guard success else { return }
-                self.startLoading()
-                self.open(database: database)
-
-            case .failure:
-                self.formView?.alpha = 1
-                self.passwordField?.becomeFirstResponder()
-            }
-        }
-    }
+    // MARK: - Keyboard
 
     @objc func keyboardWillShow(notification: NSNotification) {
         guard let userInfo = notification.userInfo else { return }
@@ -237,14 +206,55 @@ open class LockViewController: UIViewController {
 
     @objc func willEnterForeground(notification: NSNotification) {
         guard database?.lockIfNeeded() ?? true else { return }
+        presentedViewController?.dismiss(animated: false, completion: unlock)
+    }
 
-        presentedViewController?.dismiss(animated: false) {
-            self.biometricAuthentication()
+    // MARK: - Ask User Credentials
+
+    private func unlock() {
+        guard let database = database else { return }
+
+        if Settings.Biometrics, database.hasPassword {
+            askBiometrics()
+        } else {
+            askPassword()
+        }
+    }
+
+    private func askPassword() {
+        let delay = isAppExtension ? 0.1 : 0
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
+            self.passwordField?.becomeFirstResponder()
+        }
+    }
+
+    private func askBiometrics() {
+        guard let database = database else { return }
+        formView?.alpha = 0
+
+        passwordField?.resignFirstResponder()
+
+        let context = LAContext()
+        context.localizedCancelTitle = L10n.cancel
+        context.localizedFallbackTitle = L10n.enterMasterPassword
+
+        context.authenticate(localizedReason: L10n.unlockMiKee) { result in
+
+            switch result {
+            case .success(let success):
+                guard success else { return }
+                self.startLoading()
+                self.open(database: database)
+
+            case .failure:
+                self.formView?.alpha = 1
+                self.askPassword()
+            }
         }
     }
 
     func startLoading() {
-
         self.passwordField?.resignFirstResponder()
 
         UIView.animate(withDuration: 0.2) {
@@ -371,7 +381,7 @@ extension LAContext {
         return context.biometryType
     }
 
-    public func authenticate(after delay: TimeInterval = 0, localizedReason reason: String, completionHandler: @escaping ResultClosure<Bool>) {
+    public func authenticate(localizedReason reason: String, completionHandler: @escaping ResultClosure<Bool>) {
 
         var error: NSError?
 
@@ -384,6 +394,8 @@ extension LAContext {
 
             return DispatchQueue.main.async { completionHandler(result) }
         }
+
+        let delay = isAppExtension ? 0.5 : 0
 
         DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
 
