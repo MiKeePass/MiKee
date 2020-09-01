@@ -1,0 +1,241 @@
+/* 
+  Localizable.strings
+  MiKee
+
+  Created by Maxime Epain on 03/12/2018.
+  Copyright © 2018 Maxime Epain. All rights reserved.
+*/
+
+/* Select a Password Database Title */
+"Select a Password Database" = "Select a Password Database";
+
+/* Touch/Face ID reason */
+"Unlock MiKee" = "Unlock MiKee";
+
+/* Database Name Title */
+"Database Name" = "Database Name";
+
+/* Select key file placeholder*/
+"Select key file" = "Select key file";
+
+/* Master Password Title */
+"Master Password" = "Master Password";
+
+/* lock MiKee */
+"Lock" = "Lock";
+
+/* Unlock MiKee */
+"Unlock" = "Unlock";
+
+/* Password Database */
+"Password Database" = "Password Database";
+
+/* Key Files */
+"Key Files" = "Key Files";
+
+/* Key File */
+"Key File" = "Key File";
+
+/* Create */
+"Create" = "Create";
+
+/* Import */
+"Import" = "Import";
+
+/* Copy To Clipboard */
+"Copy" = "Copy";
+
+/* Copied To Clipboard */
+"Copied" = "Copied";
+
+/* User Cell Title */
+"User" = "User";
+
+/* Password Cell Title */
+"Password" = "Password";
+
+/* Website Cell Title */
+"Website" = "Website";
+
+/* Note Cell Title */
+"Note" = "Note";
+
+/* Username */
+"Username" = "Username";
+
+/* Custom Field */
+"Custom Field" = "Custom Field";
+
+/* Updated */
+"Updated" = "Updated";
+
+/* Deleted Banner */
+"Deleted" = "Deleted";
+
+/* Auto-lock */
+"Auto-lock" = "Auto-lock";
+
+/* Auto-lock Always */
+"Always" = "Always";
+
+/* Auto-lock 5 minutes */
+"5 minutes" = "5 minutes";
+
+/* Auto-lock 10 minutes */
+"10 minutes" = "10 minutes";
+
+/* Auto-lock 30 minutes */
+"30 minutes" = "30 minutes";
+
+/* Auto-lock 1 hour */
+"1 hour" = "1 hour";
+
+/* Auto-lock 12 hours */
+"12 hours" = "12 hours";
+
+/* Auto-lock 1 day */
+"1 day" = "1 day";
+
+/* Don't Auto-lock */
+"Don't Auto-lock" = "Don't Auto-lock";
+
+/* General */
+"General" = "General";
+
+/* Apple */
+"Apple" = "Apple";
+
+/* Internet */
+"Internet" = "Internet";
+
+/* Email */
+"Email" = "Email";
+
+/* */
+"All" = "All";
+
+/* Banking */
+"Banking" = "Banking";
+
+/* No Value Error Title */
+"No Value" = "No Value";
+
+/* No Value Error Message */
+"Please enter a field value" = "Please enter a field value";
+
+/* Already Exist Error Message: <value> already exist */
+"%@ already exist" = "%@ already exist";
+
+/* Error Title */
+"Error:" = "Error:";
+
+/* New Entry Title */
+"New Entry" = "New Entry";
+
+/* Add New Entry Details */
+"Add a new entry for %@" = "Add a new entry for %@";
+
+/* Create Database Name Title */
+"Database Name" = "Database Name";
+
+/* Database no name Error */
+"Please enter a Password Database name." = "Please enter a Password Database name.";
+
+/* Create Database Repeat Password Title */
+"Confirm Master Password" = "Confirm Master Password";
+
+/* No Master Password Error */
+"Please enter a Password" = "Please enter a Password";
+
+/* Master Passwork and Confirmation Matching Error */
+"Your password and confirmation password do not match." = "Your password and confirmation password do not match.";
+
+/* Create a Key File Title */
+"Create a Key file" = "Create a Key file";
+
+/* Create Key File */
+"Enter a Key file name" = "Enter a Key file name";
+
+/* Create OR select a key file */
+"Or" = "Or";
+
+/* Select an existing key file */
+"Select An Existing One" = "Select An Existing One";
+
+/* Create Database Success Title*/
+"Your Password Database has been created!" = "Your Password Database has been created!";
+
+/* Export Database Description part 1 */
+"Your password database has been saved locally, do you want to export it?" = "Your password database has been saved locally, do you want to export it?";
+
+/* Export Database Description part 2 */
+"MiKee will be able to keep it synced with your external storage" = "MiKee will be able to keep it synced with your external storage";
+
+/* Export Button */
+"Export" = "Export";
+
+/* Create Button */
+"Create" = "Create";
+
+/* Skip Button */
+"Skip" = "Skip";
+
+/* Back Button */
+"Back" = "Back";
+
+/* Next Button */
+"Next" = "Next";
+
+/* Save Button */
+"Save" = "Save";
+
+/* Not now Button */
+"Not now" = "Not now";
+
+/* Settings Title */
+"Settings" = "Settings";
+
+/* Password Length */
+"Length: %@" = "Length: %@";
+
+/* Select Button */
+"Select" = "Select";
+
+/* Cancel Button */
+"Cancel" = "Cancel";
+
+/* Enable Touch ID */
+"Enable Touch ID" = "Enable Touch ID";
+
+/* Enable Face ID */
+"Enable Face ID" = "Enable Face ID";
+
+/* Enter Master Password fallback title */
+"Enter Master Password" = "Enter Master Password";
+
+/* This account requires an OTPalert title */
+"This account requires an OTP, you can use the following code:" = "This account requires an OTP, you can use the following code:";
+
+/* Ok, got it */
+"Ok, got it" = "Ok, got it";
+
+/* QR Code Scanner title */
+"QR Code Scanner" = "QR Code Scanner";
+
+/* TOC title */
+"Terms & Conditions" = "Terms & Conditions";
+
+/* Privacy title */
+"Privacy Policy" = "Privacy Policy";
+
+/* Feedback title */
+"Thank you for testing MiKee!" = "Thank you for testing MiKee!";
+
+/* Feedback description 1 */
+"Do you have a few minutes to give us feedback? We would be very interested in hearing back from you." = "Do you have a few minutes to give us feedback? We would be very interested in hearing back from you.";
+
+/* Feedback description 2 */
+"If it's not the right time, you will still have the opportunity to give feedback from the Settings screen." = "If it's not the right time, you will still have the opportunity to give feedback from the Settings screen.";
+
+/* Feedback Settings title */
+"What do you think about MiKee?" = "What do you think about MiKee?";

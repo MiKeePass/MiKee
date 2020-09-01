@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		130E0BE2D7B054ABAC7ED8BC /* Pods_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29D28AB5176334A200D4B083 /* Pods_Tests.framework */; };
 		1BDE5077196B4A92A5116D18 /* Pods_MiKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D02F4CEDE96F4F541DED3C7 /* Pods_MiKit.framework */; };
+		4956FBB2D0B88EBC5BA50255 /* Pods_AutoFill.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59062855E747A588792C1AE6 /* Pods_AutoFill.framework */; };
 		8EA9F6C8DF7CFCA746C00D6C /* Pods_WebExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B88101BD5C87A65A6563F799 /* Pods_WebExtension.framework */; };
 		9C03BAD422AD538F00FFACED /* test_keyfile_nopass.kdbx in Resources */ = {isa = PBXBuildFile; fileRef = 9C03BAD022AD538F00FFACED /* test_keyfile_nopass.kdbx */; };
 		9C03BAD522AD538F00FFACED /* test_keyfile_nopass.kdbx in Resources */ = {isa = PBXBuildFile; fileRef = 9C03BAD022AD538F00FFACED /* test_keyfile_nopass.kdbx */; };
@@ -30,7 +31,7 @@
 		9C2A1EC11FD0739A00986F0D /* Entry.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C2A1EC01FD0739A00986F0D /* Entry.storyboard */; };
 		9C3CADA521636FA700E3A593 /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C3CAD9021636F1F00E3A593 /* AuthenticationServices.framework */; };
 		9C3CADA821636FA700E3A593 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3CADA721636FA700E3A593 /* RootViewController.swift */; };
-		9C3CADB021636FA700E3A593 /* CredentialExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9C3CADA421636FA700E3A593 /* CredentialExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		9C3CADB021636FA700E3A593 /* AutoFill.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9C3CADA421636FA700E3A593 /* AutoFill.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		9C45154B22AD4A83009E707A /* UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C45154A22AD4A83009E707A /* UITests.swift */; };
 		9C45155522AD4DA6009E707A /* UnlockSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C45155422AD4DA6009E707A /* UnlockSpec.swift */; };
 		9C5215431FD2B011006D06F7 /* Tree.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C5215421FD2B011006D06F7 /* Tree.storyboard */; };
@@ -49,6 +50,9 @@
 		9C83B2351FCF29A200DE6886 /* AllEntriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C83B2341FCF29A200DE6886 /* AllEntriesViewController.swift */; };
 		9C85226D2167B2D2007DC165 /* Create.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C85226C2167B2D2007DC165 /* Create.storyboard */; };
 		9C85226F2167C6E2007DC165 /* CreateDatabaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C85226E2167C6E2007DC165 /* CreateDatabaseViewController.swift */; };
+		9C85287323D9AD84005FAB01 /* FeedbackAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C85287223D9AD84005FAB01 /* FeedbackAlertViewController.swift */; };
+		9C85287523D9AE6F005FAB01 /* Feedback.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C85287423D9AE6F005FAB01 /* Feedback.xib */; };
+		9C85287823DB0367005FAB01 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C85287723DB0367005FAB01 /* Log.swift */; };
 		9C86EA4F202B6350003EDDBA /* WebExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9C86EA45202B6350003EDDBA /* WebExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		9C91679D2076618B009478F5 /* OpenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C91679C2076618B009478F5 /* OpenViewController.swift */; };
 		9C91DE052346154B00CB0D6D /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C91DE042346154B00CB0D6D /* StoreKit.framework */; };
@@ -80,7 +84,7 @@
 		9CDB670B20265F5800C4C36B /* Demo.kdbx in Resources */ = {isa = PBXBuildFile; fileRef = 9CBD27061F03033100528A4D /* Demo.kdbx */; };
 		9CDCC712202E06510072302F /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE8F89F1F6B18C5006F6397 /* EntryViewController.swift */; };
 		9CDCC714202E08AE0072302F /* FieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD99B592004FC65006A3E75 /* FieldViewController.swift */; };
-		9CDCC715202E08B00072302F /* FieldAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCD7F54200F4DFC00E0AB87 /* FieldAnimationController.swift */; };
+		9CDCC715202E08B00072302F /* FieldTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCD7F54200F4DFC00E0AB87 /* FieldTransitioning.swift */; };
 		9CDCC716202E08B20072302F /* FieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C60403D1FD9F49F005C1D09 /* FieldCell.swift */; };
 		9CDCC717202E08C00072302F /* FieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C60403E1FD9F49F005C1D09 /* FieldCell.xib */; };
 		9CDCC718202E08C40072302F /* NoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF645F11FC5F1E9001CCBE7 /* NoteCell.swift */; };
@@ -149,7 +153,6 @@
 		B6319F4EBC5724E1E4B581FB /* Pods_MiKee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9784674469D2357D9D57A5D1 /* Pods_MiKee.framework */; };
 		C96C7D33D21213A776CC57C9 /* Pods_Snapshots.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 454DD8BB6BBB6F2519113664 /* Pods_Snapshots.framework */; };
 		CED3A6F61B30EE7A1A1D5BA5 /* Pods_UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A84C767768CF0C9F6D9FF213 /* Pods_UITests.framework */; };
-		D4834591E9E068F5696EAD10 /* Pods_CredentialExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1003D09A63611E8372EAF932 /* Pods_CredentialExtension.framework */; };
 		F059FCA5FE17467E0EA93EE2 /* Pods_MiKee_Resources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72029AB5FE1F4F3ECAF3572A /* Pods_MiKee_Resources.framework */; };
 		F76A8827520320D60E611593 /* Pods_ExtensionKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE5F47957999417ED066C456 /* Pods_ExtensionKit.framework */; };
 /* End PBXBuildFile section */
@@ -221,7 +224,7 @@
 			dstSubfolderSpec = 13;
 			files = (
 				9C86EA4F202B6350003EDDBA /* WebExtension.appex in Embed App Extensions */,
-				9C3CADB021636FA700E3A593 /* CredentialExtension.appex in Embed App Extensions */,
+				9C3CADB021636FA700E3A593 /* AutoFill.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -245,8 +248,9 @@
 		00B6D12AFD4703C1B52E4192 /* Pods-MiKee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiKee.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MiKee/Pods-MiKee.debug.xcconfig"; sourceTree = "<group>"; };
 		0E5244B6C618A39DF0C3C484 /* Pods-MiKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MiKit/Pods-MiKit.debug.xcconfig"; sourceTree = "<group>"; };
 		0EF3E729BEE7EFBC84560DC6 /* Pods-CredentialExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CredentialExtension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CredentialExtension/Pods-CredentialExtension.debug.xcconfig"; sourceTree = "<group>"; };
-		1003D09A63611E8372EAF932 /* Pods_CredentialExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CredentialExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F6AEE988D9B4967F3945D95 /* Pods-AutoFill.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoFill.release.xcconfig"; path = "Pods/Target Support Files/Pods-AutoFill/Pods-AutoFill.release.xcconfig"; sourceTree = "<group>"; };
 		125082793884849C13EC3AA4 /* Pods-UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UITests/Pods-UITests.release.xcconfig"; sourceTree = "<group>"; };
+		22AC41ED75B99B837D211085 /* Pods-AutoFill.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoFill.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AutoFill/Pods-AutoFill.debug.xcconfig"; sourceTree = "<group>"; };
 		278A40F6FD05F67E61B1B4D9 /* Pods-ExtensionKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExtensionKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-ExtensionKit/Pods-ExtensionKit.release.xcconfig"; sourceTree = "<group>"; };
 		29D28AB5176334A200D4B083 /* Pods_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A0D9D801F2C7201664C6774 /* Pods-WebExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebExtension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WebExtension/Pods-WebExtension.debug.xcconfig"; sourceTree = "<group>"; };
@@ -254,6 +258,7 @@
 		4491447019084A1C512C070B /* Pods-Snapshots.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Snapshots.release.xcconfig"; path = "Pods/Target Support Files/Pods-Snapshots/Pods-Snapshots.release.xcconfig"; sourceTree = "<group>"; };
 		454DD8BB6BBB6F2519113664 /* Pods_Snapshots.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Snapshots.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EEC7A3324BB11EC944A989B /* Pods-MiKeeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiKeeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MiKeeUITests/Pods-MiKeeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		59062855E747A588792C1AE6 /* Pods_AutoFill.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AutoFill.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DC658A4A9D35A6F634BB998 /* Pods-CredentialExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CredentialExtension.release.xcconfig"; path = "Pods/Target Support Files/Pods-CredentialExtension/Pods-CredentialExtension.release.xcconfig"; sourceTree = "<group>"; };
 		72029AB5FE1F4F3ECAF3572A /* Pods_MiKee_Resources.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MiKee_Resources.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		72575E0D46FCF38913B058BF /* Pods-MiKee-Resources.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiKee-Resources.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MiKee-Resources/Pods-MiKee-Resources.debug.xcconfig"; sourceTree = "<group>"; };
@@ -285,7 +290,7 @@
 		9C338DF6201E4F20005E0E8E /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		9C338DF8201E60BA005E0E8E /* SearchNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNavigationController.swift; sourceTree = "<group>"; };
 		9C3CAD9021636F1F00E3A593 /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = System/Library/Frameworks/AuthenticationServices.framework; sourceTree = SDKROOT; };
-		9C3CADA421636FA700E3A593 /* CredentialExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CredentialExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C3CADA421636FA700E3A593 /* AutoFill.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = AutoFill.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C3CADA721636FA700E3A593 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		9C3CADAC21636FA700E3A593 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C3CADAD21636FA700E3A593 /* CredentialExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CredentialExtension.entitlements; sourceTree = "<group>"; };
@@ -319,6 +324,9 @@
 		9C83B2341FCF29A200DE6886 /* AllEntriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllEntriesViewController.swift; sourceTree = "<group>"; };
 		9C85226C2167B2D2007DC165 /* Create.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Create.storyboard; sourceTree = "<group>"; };
 		9C85226E2167C6E2007DC165 /* CreateDatabaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDatabaseViewController.swift; sourceTree = "<group>"; };
+		9C85287223D9AD84005FAB01 /* FeedbackAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackAlertViewController.swift; sourceTree = "<group>"; };
+		9C85287423D9AE6F005FAB01 /* Feedback.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Feedback.xib; sourceTree = "<group>"; };
+		9C85287723DB0367005FAB01 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		9C86EA45202B6350003EDDBA /* WebExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WebExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C86EA4C202B6350003EDDBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C8789521F65D158006355BB /* MiError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiError.swift; sourceTree = "<group>"; };
@@ -363,7 +371,7 @@
 		9CC81A132010EAFD0060A74F /* MiKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MiKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CC81A152010EAFD0060A74F /* MiKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MiKit.h; sourceTree = "<group>"; };
 		9CC81A162010EAFD0060A74F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9CCD7F54200F4DFC00E0AB87 /* FieldAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldAnimationController.swift; sourceTree = "<group>"; };
+		9CCD7F54200F4DFC00E0AB87 /* FieldTransitioning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldTransitioning.swift; sourceTree = "<group>"; };
 		9CCE68E520205E93007A9D7B /* Banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
 		9CD4C19E203EE8F900F12848 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		9CD99B592004FC65006A3E75 /* FieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldViewController.swift; sourceTree = "<group>"; };
@@ -441,7 +449,7 @@
 				9CFB09F921654F43008A0BFB /* ExtensionKit.framework in Frameworks */,
 				9CFB09FA21654F43008A0BFB /* MiKit.framework in Frameworks */,
 				9C3CADA521636FA700E3A593 /* AuthenticationServices.framework in Frameworks */,
-				D4834591E9E068F5696EAD10 /* Pods_CredentialExtension.framework in Frameworks */,
+				4956FBB2D0B88EBC5BA50255 /* Pods_AutoFill.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -568,7 +576,7 @@
 			path = Search;
 			sourceTree = "<group>";
 		};
-		9C3CADA621636FA700E3A593 /* CredentialExtension */ = {
+		9C3CADA621636FA700E3A593 /* AutoFill */ = {
 			isa = PBXGroup;
 			children = (
 				9C3CADAD21636FA700E3A593 /* CredentialExtension.entitlements */,
@@ -577,7 +585,7 @@
 				9CFB09F6216534F2008A0BFB /* OpenViewController.swift */,
 				9C3CADAC21636FA700E3A593 /* Info.plist */,
 			);
-			path = CredentialExtension;
+			path = AutoFill;
 			sourceTree = "<group>";
 		};
 		9C45154922AD4A83009E707A /* UI */ = {
@@ -657,6 +665,23 @@
 				9C85226E2167C6E2007DC165 /* CreateDatabaseViewController.swift */,
 			);
 			path = Create;
+			sourceTree = "<group>";
+		};
+		9C85286F23D8CB20005FAB01 /* Feedback */ = {
+			isa = PBXGroup;
+			children = (
+				9C85287223D9AD84005FAB01 /* FeedbackAlertViewController.swift */,
+				9C85287423D9AE6F005FAB01 /* Feedback.xib */,
+			);
+			path = Feedback;
+			sourceTree = "<group>";
+		};
+		9C85287623DB0339005FAB01 /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				9C85287723DB0367005FAB01 /* Log.swift */,
+			);
+			path = Log;
 			sourceTree = "<group>";
 		};
 		9C86EA46202B6350003EDDBA /* WebExtension */ = {
@@ -761,12 +786,7 @@
 			isa = PBXGroup;
 			children = (
 				9C5838DD203DDBCB000298EA /* Metadata */,
-				9CB6FBC11F02BFF200103EA5 /* MiKee */,
-				9CC81A142010EAFD0060A74F /* MiKit */,
-				9CFB09D7216527D9008A0BFB /* ExtensionKit */,
-				9C86EA46202B6350003EDDBA /* WebExtension */,
-				9C3CADA621636FA700E3A593 /* CredentialExtension */,
-				9C18747A21B43FE100218AC0 /* Resources */,
+				9CE5B19B2395BE550074F1B3 /* Sources */,
 				9C9790742034733700788E5C /* Tests */,
 				9C97907D2034734600788E5C /* Snapshots */,
 				9CBD27031F0301DF00528A4D /* Frameworks */,
@@ -783,7 +803,7 @@
 				9C86EA45202B6350003EDDBA /* WebExtension.appex */,
 				9C9790732034733700788E5C /* Snapshots.xctest */,
 				9C46697F2040817B00EA18E7 /* Tests.xctest */,
-				9C3CADA421636FA700E3A593 /* CredentialExtension.appex */,
+				9C3CADA421636FA700E3A593 /* AutoFill.appex */,
 				9CFB09D6216527D9008A0BFB /* ExtensionKit.framework */,
 				9C18747921B43FE100218AC0 /* Resources.framework */,
 				9C45154822AD4A83009E707A /* MiKee-UITests.xctest */,
@@ -823,11 +843,11 @@
 				454DD8BB6BBB6F2519113664 /* Pods_Snapshots.framework */,
 				9C3CAD9021636F1F00E3A593 /* AuthenticationServices.framework */,
 				BE5F47957999417ED066C456 /* Pods_ExtensionKit.framework */,
-				1003D09A63611E8372EAF932 /* Pods_CredentialExtension.framework */,
 				8C1F33CDC456DDA2485A31D8 /* Pods_Resources.framework */,
 				72029AB5FE1F4F3ECAF3572A /* Pods_MiKee_Resources.framework */,
 				29D28AB5176334A200D4B083 /* Pods_Tests.framework */,
 				A84C767768CF0C9F6D9FF213 /* Pods_UITests.framework */,
+				59062855E747A588792C1AE6 /* Pods_AutoFill.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -874,6 +894,7 @@
 		9CC5AA0820B2D2DC006B096B /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				9C85286F23D8CB20005FAB01 /* Feedback */,
 				9CC5AA0920B2D30A006B096B /* Settings.storyboard */,
 				9CC5AA0B20B2D329006B096B /* SettingsViewController.swift */,
 				9CB7DC4A21D1168D00FCC4F5 /* SettingViewController.swift */,
@@ -884,6 +905,7 @@
 		9CC81A142010EAFD0060A74F /* MiKit */ = {
 			isa = PBXGroup;
 			children = (
+				9C85287623DB0339005FAB01 /* Log */,
 				9CEE5252202C727B00043E89 /* UI */,
 				9CFC4B5F1FD4011600025197 /* Settings */,
 				9C0A0A8421FCA16800914A78 /* Database */,
@@ -916,11 +938,24 @@
 			path = Binaries;
 			sourceTree = "<group>";
 		};
+		9CE5B19B2395BE550074F1B3 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				9CB6FBC11F02BFF200103EA5 /* MiKee */,
+				9CC81A142010EAFD0060A74F /* MiKit */,
+				9C18747A21B43FE100218AC0 /* Resources */,
+				9CFB09D7216527D9008A0BFB /* ExtensionKit */,
+				9C3CADA621636FA700E3A593 /* AutoFill */,
+				9C86EA46202B6350003EDDBA /* WebExtension */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
 		9CE8F8AA1F6B1A0B006F6397 /* Fields */ = {
 			isa = PBXGroup;
 			children = (
 				9CD99B592004FC65006A3E75 /* FieldViewController.swift */,
-				9CCD7F54200F4DFC00E0AB87 /* FieldAnimationController.swift */,
+				9CCD7F54200F4DFC00E0AB87 /* FieldTransitioning.swift */,
 				9C60403D1FD9F49F005C1D09 /* FieldCell.swift */,
 				9C60403E1FD9F49F005C1D09 /* FieldCell.xib */,
 				9CF645F01FC5F1CE001CCBE7 /* Note */,
@@ -1104,6 +1139,8 @@
 				761FEE8742B61A11DA97052D /* Pods-Tests.release.xcconfig */,
 				7889AD9C9886C408016C2198 /* Pods-UITests.debug.xcconfig */,
 				125082793884849C13EC3AA4 /* Pods-UITests.release.xcconfig */,
+				22AC41ED75B99B837D211085 /* Pods-AutoFill.debug.xcconfig */,
+				0F6AEE988D9B4967F3945D95 /* Pods-AutoFill.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -1158,9 +1195,9 @@
 			productReference = 9C18747921B43FE100218AC0 /* Resources.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		9C3CADA321636FA700E3A593 /* CredentialExtension */ = {
+		9C3CADA321636FA700E3A593 /* AutoFill */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9C3CADB121636FA700E3A593 /* Build configuration list for PBXNativeTarget "CredentialExtension" */;
+			buildConfigurationList = 9C3CADB121636FA700E3A593 /* Build configuration list for PBXNativeTarget "AutoFill" */;
 			buildPhases = (
 				C01B88D1423404B63C7CE5A8 /* [CP] Check Pods Manifest.lock */,
 				9C3CADA021636FA700E3A593 /* Sources */,
@@ -1171,9 +1208,9 @@
 			);
 			dependencies = (
 			);
-			name = CredentialExtension;
+			name = AutoFill;
 			productName = CredentialExtension;
-			productReference = 9C3CADA421636FA700E3A593 /* CredentialExtension.appex */;
+			productReference = 9C3CADA421636FA700E3A593 /* AutoFill.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 		9C45154722AD4A83009E707A /* UITests */ = {
@@ -1428,8 +1465,8 @@
 			projectRoot = "";
 			targets = (
 				9CB6FBBE1F02BFF200103EA5 /* MiKee */,
+				9C3CADA321636FA700E3A593 /* AutoFill */,
 				9C86EA44202B6350003EDDBA /* WebExtension */,
-				9C3CADA321636FA700E3A593 /* CredentialExtension */,
 				9CC81A122010EAFD0060A74F /* MiKit */,
 				9CFB09D5216527D9008A0BFB /* ExtensionKit */,
 				9C18747821B43FE100218AC0 /* Resources */,
@@ -1507,6 +1544,7 @@
 				9C2A1EBF1FD0738C00986F0D /* Group.storyboard in Resources */,
 				9C9734AD21C47F5200C87079 /* Assets.xcassets in Resources */,
 				9C2A1EC11FD0739A00986F0D /* Entry.storyboard in Resources */,
+				9C85287523D9AE6F005FAB01 /* Feedback.xib in Resources */,
 				9C5215451FD2B01D006D06F7 /* Open.storyboard in Resources */,
 				9CC5AA0A20B2D30A006B096B /* Settings.storyboard in Resources */,
 				9C5785E51F6C0D9F00CFAA18 /* GroupCell.xib in Resources */,
@@ -1743,7 +1781,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "${PODS_ROOT}/SwiftGen/bin/swiftgen config run --config Resources/swiftgen.yml\n\n";
+			shellScript = "${PODS_ROOT}/SwiftGen/bin/swiftgen config run --config Sources/Resources/swiftgen.yml\n\n";
 		};
 		9CDE29492038E096001373C0 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1808,7 +1846,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CredentialExtension-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-AutoFill-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1947,6 +1985,7 @@
 				9CE8F8A11F6B18C6006F6397 /* GroupViewController.swift in Sources */,
 				9C5785E41F6C0D9F00CFAA18 /* GroupCell.swift in Sources */,
 				9CB6FBC31F02BFF200103EA5 /* AppDelegate.swift in Sources */,
+				9C85287323D9AD84005FAB01 /* FeedbackAlertViewController.swift in Sources */,
 				9CC04EEB207F7B4300370588 /* DatabaseCell.swift in Sources */,
 				9CEE5271202C945400043E89 /* SearchNavigationController.swift in Sources */,
 				9C91679D2076618B009478F5 /* OpenViewController.swift in Sources */,
@@ -1963,6 +2002,7 @@
 			files = (
 				9CC81A212010EB260060A74F /* MiError.swift in Sources */,
 				9CC81A202010EB040060A74F /* Database.swift in Sources */,
+				9C85287823DB0367005FAB01 /* Log.swift in Sources */,
 				9CADFCCD21ADBE330060883B /* PasswordStrengthView.swift in Sources */,
 				9CDB670A202645A700C4C36B /* Demo.swift in Sources */,
 				9CEE5253202C740E00043E89 /* LockViewController.swift in Sources */,
@@ -1985,7 +2025,7 @@
 				9CEE5261202C80CF00043E89 /* EntryCell.swift in Sources */,
 				9CDCC714202E08AE0072302F /* FieldViewController.swift in Sources */,
 				9CF8DFA722AFFC0700E51E03 /* QRScannerView.swift in Sources */,
-				9CDCC715202E08B00072302F /* FieldAnimationController.swift in Sources */,
+				9CDCC715202E08B00072302F /* FieldTransitioning.swift in Sources */,
 				9CDCC716202E08B20072302F /* FieldCell.swift in Sources */,
 				9CDCC718202E08C40072302F /* NoteCell.swift in Sources */,
 				9CF8DF9C22AF0D3E00E51E03 /* AlertViewController.swift in Sources */,
@@ -2026,7 +2066,7 @@
 		};
 		9C3CADAF21636FA700E3A593 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9C3CADA321636FA700E3A593 /* CredentialExtension */;
+			target = 9C3CADA321636FA700E3A593 /* AutoFill */;
 			targetProxy = 9C3CADAE21636FA700E3A593 /* PBXContainerItemProxy */;
 		};
 		9C45154E22AD4A83009E707A /* PBXTargetDependency */ = {
@@ -2087,7 +2127,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = Resources/Info.plist;
+				INFOPLIST_FILE = Sources/Resources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -2115,7 +2155,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = Resources/Info.plist;
+				INFOPLIST_FILE = Sources/Resources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_FAST_MATH = YES;
@@ -2131,18 +2171,18 @@
 		};
 		9C3CADB221636FA700E3A593 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0EF3E729BEE7EFBC84560DC6 /* Pods-CredentialExtension.debug.xcconfig */;
+			baseConfigurationReference = 22AC41ED75B99B837D211085 /* Pods-AutoFill.debug.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_ENTITLEMENTS = CredentialExtension/CredentialExtension.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Sources/AutoFill/CredentialExtension.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = C75GEDTP26;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = CredentialExtension/Info.plist;
+				INFOPLIST_FILE = Sources/AutoFill/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -2158,18 +2198,18 @@
 		};
 		9C3CADB321636FA700E3A593 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6DC658A4A9D35A6F634BB998 /* Pods-CredentialExtension.release.xcconfig */;
+			baseConfigurationReference = 0F6AEE988D9B4967F3945D95 /* Pods-AutoFill.release.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_ENTITLEMENTS = CredentialExtension/CredentialExtension.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Sources/AutoFill/CredentialExtension.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = C75GEDTP26;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = CredentialExtension/Info.plist;
+				INFOPLIST_FILE = Sources/AutoFill/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				MTL_FAST_MATH = YES;
@@ -2279,12 +2319,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_ENTITLEMENTS = WebExtension/WebExtension.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Sources/WebExtension/WebExtension.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = C75GEDTP26;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = WebExtension/Info.plist;
+				INFOPLIST_FILE = Sources/WebExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "me.maxep.MiKee.find-login-action";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2303,12 +2343,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_ENTITLEMENTS = WebExtension/WebExtension.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Sources/WebExtension/WebExtension.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = C75GEDTP26;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = WebExtension/Info.plist;
+				INFOPLIST_FILE = Sources/WebExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "me.maxep.MiKee.find-login-action";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2491,10 +2531,10 @@
 			baseConfigurationReference = 00B6D12AFD4703C1B52E4192 /* Pods-MiKee.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = MiKee/MiKee.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Sources/MiKee/MiKee.entitlements;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = C75GEDTP26;
-				INFOPLIST_FILE = MiKee/Info.plist;
+				INFOPLIST_FILE = Sources/MiKee/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = me.maxep.MiKee;
@@ -2510,11 +2550,11 @@
 			baseConfigurationReference = A46ED14916A5777C867A8058 /* Pods-MiKee.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = MiKee/MiKee.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Sources/MiKee/MiKee.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = C75GEDTP26;
-				INFOPLIST_FILE = MiKee/Info.plist;
+				INFOPLIST_FILE = Sources/MiKee/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = me.maxep.MiKee;
@@ -2536,7 +2576,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = MiKit/Info.plist;
+				INFOPLIST_FILE = Sources/MiKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.maxep.MiKee.kit;
@@ -2560,7 +2600,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = MiKit/Info.plist;
+				INFOPLIST_FILE = Sources/MiKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.maxep.MiKee.kit;
@@ -2587,7 +2627,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = ExtensionKit/Info.plist;
+				INFOPLIST_FILE = Sources/ExtensionKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -2617,7 +2657,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = ExtensionKit/Info.plist;
+				INFOPLIST_FILE = Sources/ExtensionKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_FAST_MATH = YES;
@@ -2644,7 +2684,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9C3CADB121636FA700E3A593 /* Build configuration list for PBXNativeTarget "CredentialExtension" */ = {
+		9C3CADB121636FA700E3A593 /* Build configuration list for PBXNativeTarget "AutoFill" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9C3CADB221636FA700E3A593 /* Debug */,
