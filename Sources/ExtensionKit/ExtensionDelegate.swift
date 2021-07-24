@@ -19,7 +19,7 @@
 import Foundation
 import KeePassKit
 
-public protocol ExtensionDelegate: class {
+public protocol ExtensionDelegate: AnyObject {
 
     var extensionContext: NSExtensionContext? { get }
 

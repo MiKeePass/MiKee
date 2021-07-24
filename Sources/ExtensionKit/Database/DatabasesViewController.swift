@@ -20,7 +20,7 @@ import UIKit
 import Resources
 import MiKit
 
-public protocol DatabasesViewControllerDelegate: class {
+public protocol DatabasesViewControllerDelegate: AnyObject {
     func databasesViewController(_ databasesViewController: DatabasesViewController, didSelect database: Database)
 }
 

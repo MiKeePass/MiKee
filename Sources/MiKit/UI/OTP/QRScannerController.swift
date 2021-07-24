@@ -20,7 +20,7 @@ import UIKit
 import Resources
 
 /// Delegate callback for the QRScannerView.
-public protocol QRScannerControllerDelegate: class {
+public protocol QRScannerControllerDelegate: AnyObject {
     func scanner(_ scanner: QRScannerController, didFind code: String)
 }
 

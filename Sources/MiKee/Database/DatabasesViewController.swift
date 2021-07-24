@@ -21,7 +21,7 @@ import Resources
 import KeePassKit
 import MiKit
 
-protocol DatabasesViewControllerDelegate: class {
+protocol DatabasesViewControllerDelegate: AnyObject {
     func databasesViewController(_ databasesViewController: DatabasesViewController, didSelect database: Database)
     func databasesViewController(_ databasesViewController: DatabasesViewController, didRemove database: Database)
 }

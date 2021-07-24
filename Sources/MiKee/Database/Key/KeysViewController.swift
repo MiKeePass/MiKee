@@ -28,7 +28,7 @@ import UIKit
 import Resources
 import MiKit
 
-public protocol KeysViewControllerDelegate: class {
+public protocol KeysViewControllerDelegate: AnyObject {
     func keysViewController(_ keysViewController: KeysViewController, didSelect key: Database.Key)
     func keysViewController(_ keysViewController: KeysViewController, didRemoveWith name: String)
 }
