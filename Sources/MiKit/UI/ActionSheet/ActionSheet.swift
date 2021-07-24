@@ -20,7 +20,7 @@ import UIKit
 import Resources
 import ObjectiveC
 
-public protocol Action: class {
+public protocol Action: AnyObject {
 
     var control: UIControl { get }
 

@@ -22,7 +22,7 @@ import MiKit
 import ExtensionKit
 import KeePassKit
 
-protocol OpenViewControllerDelegate: class {
+protocol OpenViewControllerDelegate: AnyObject {
 
     func openViewController(_ openViewController: OpenViewController, didSelect credential: Credential)
 

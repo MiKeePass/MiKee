@@ -21,7 +21,7 @@ import Resources
 import KeePassKit
 import MiKit
 
-protocol CreateDatabaseViewControllerDelegate: class {
+protocol CreateDatabaseViewControllerDelegate: AnyObject {
     func createDatabaseViewController(_ createDatabaseViewController: CreateDatabaseViewController, didCreate database: Database, tree: KPKTree?)
     func createDatabaseViewControllerDidCancel(_ createDatabaseViewController: CreateDatabaseViewController)
 }

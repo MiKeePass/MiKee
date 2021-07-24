@@ -20,7 +20,7 @@ import UIKit
 import Resources
 import KeePassKit
 
-protocol FieldViewControllerDelegate: class {
+protocol FieldViewControllerDelegate: AnyObject {
     func fieldViewController(_ fieldViewController: FieldViewController, willUpdate attribute: KPKAttribute)
     func fieldViewController(_ fieldViewController: FieldViewController, didUpdate attribute: KPKAttribute)
     func fieldViewController(_ fieldViewController: FieldViewController, delete attribute: KPKAttribute)
